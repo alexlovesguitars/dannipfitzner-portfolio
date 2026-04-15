@@ -1,24 +1,17 @@
-import Image from "next/image";
+import ProjectPage from "@/components/ProjectPage";
 
 export default function Quandoo() {
   return (
-    <main>
-      <section className="relative h-80 md:h-screen">
-        <Image src="/images/Quandoo/Quandoo_Hero.webp" alt="Quandoo Hero Image" fill className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4 z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-wider">Quandoo</h1>
-          <p className="text-xl md:text-2xl tracking-wide">Product Design (2019-2022)</p>
-        </div>
-      </section>
-      <section className="py-16 px-4 md:px-8 lg:px-16">
-        <p className="text-lg text-center max-w-2xl mx-auto">
-          At Quandoo, I led product design initiatives focusing on enhancing the restaurant discovery and reservation experience. My role involved collaborating with cross-functional teams to redesign the user interface, improve user flows, and implement data-driven design decisions. I contributed to increasing user engagement and conversion rates through iterative design processes and user research.
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          At Quandoo, I led product design initiatives focusing on enhancing the restaurant discovery and reservation experience. My role involved collaborating with cross-functional teams to redesign the user interface, improve user flows, and implement data-driven design decisions. I contributed to increasing user engagement and conversion rates through iterative design processes and user research.
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p>
-      </section>
-    </main>
+    <ProjectPage
+      heroImage="/images/Quandoo/Quandoo_Hero.webp"
+      heroAlt="Quandoo Hero Image"
+      title="Quandoo"
+      subtitle="Product Design (2019-2022)"
+      content={`At Quandoo, I led product design initiatives focusing on enhancing the restaurant discovery and reservation experience. My role involved collaborating with cross-functional teams to redesign the user interface, improve user flows, and implement data-driven design decisions. I contributed to increasing user engagement and conversion rates through iterative design processes and user research.
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+      At Quandoo, I led product design initiatives focusing on enhancing the restaurant discovery and reservation experience. My role involved collaborating with cross-functional teams to redesign the user interface, improve user flows, and implement data-driven design decisions. I contributed to increasing user engagement and conversion rates through iterative design processes and user research.
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`}
+    />
   );
 }
