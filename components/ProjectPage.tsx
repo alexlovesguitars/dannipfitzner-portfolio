@@ -17,7 +17,7 @@ export default function ProjectPage({
 }: ProjectPageProps) {
   return (
     <main>
-      <section className="relative h-80 md:h-screen -mt-8 md:mt-0">
+      <section className="opacity-0 animate-fade-in-up relative h-80 md:h-screen -mt-8 md:mt-0">
         <Image
           src={heroImage}
           alt={heroAlt}
