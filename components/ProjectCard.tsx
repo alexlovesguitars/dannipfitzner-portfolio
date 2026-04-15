@@ -43,9 +43,12 @@ export default function ProjectCard() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Link key={project.id} href={`/${project.slug}`} className="block">
-            <div className="bg-white rounded-xs w-full h-full backdrop-blur-sm hover:backdrop-blur-none transition-all duration-300">
+            <div
+              className="opacity-0 animate-fade-in-up bg-white rounded-xs w-full h-full backdrop-blur-sm hover:backdrop-blur-none transition-all duration-300"
+              style={{ animationDelay: `${index * 120}ms` }}
+            >
               <div className="relative w-full aspect-[16/10]">
                 <div className="bg-gray-200 opacity-75 hover:opacity-100 transition-opacity duration-300">
                   <Image src={project.image} alt={project.title} fill className="object-cover" sizes="50vw" loading="eager"/>
