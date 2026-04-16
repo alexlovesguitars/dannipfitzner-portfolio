@@ -6,6 +6,7 @@ import "./globals.css";
 const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {

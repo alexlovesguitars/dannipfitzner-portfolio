@@ -51,7 +51,7 @@ export default function ProjectCard() {
             >
               <div className="relative w-full aspect-[16/10]">
                 <div className="bg-gray-200 opacity-100 hover:opacity-75 transition-opacity duration-300">
-                  <Image src={project.image} alt={project.title} fill className="object-cover" sizes="50vw" loading="eager"/>
+                  <Image src={project.image} alt={project.title} fill className="object-cover" sizes="50vw" loading="eager" fetchPriority="high"/>
                 </div>
               </div>
               <div className="flex flex-row justify-center p-4">
