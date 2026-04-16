@@ -28,6 +28,15 @@ export default function ProjectPage({
           fetchPriority="high"
         />
       </section>
+      <section className="mx-4 md:mx-8 lg:mx-16 py-8">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-widest mb-2">
+          {title}
+        </h1>
+        <h2 className="text-lg italic tracking-wide mb-4 text-gray-500">
+          {subtitle}
+        </h2>
+        <p className="text-md leading-relaxed">{content}</p>
+      </section>
     </main>
   );
 }

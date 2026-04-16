@@ -17,7 +17,7 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
 
 
-      if (currentScrollY < 50) {
+      if (currentScrollY < 10) {
         setIsVisible(true);
       } else {
 
