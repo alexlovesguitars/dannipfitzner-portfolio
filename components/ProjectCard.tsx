@@ -50,7 +50,7 @@ export default function ProjectCard() {
               style={{ animationDelay: `${index * 120}ms` }}
             >
               <div className="relative w-full aspect-[16/10]">
-                <div className="bg-gray-200 opacity-75 hover:opacity-100 transition-opacity duration-300">
+                <div className="bg-gray-200 opacity-100 hover:opacity-75 transition-opacity duration-300">
                   <Image src={project.image} alt={project.title} fill className="object-cover" sizes="50vw" loading="eager"/>
                 </div>
               </div>
