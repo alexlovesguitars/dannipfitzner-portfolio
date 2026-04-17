@@ -47,7 +47,7 @@ export default function About() {
             </p>
 
             <p>
-              <a href="https://www.linkedin.com/in/dannipfitzner/" target="_blank" rel="noopener noreferrer" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out">
+              <a href="https://www.linkedin.com/in/dannikirchoff/" target="_blank" rel="noopener noreferrer" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out">
                 View LinkedIn
               </a>
             </p>
