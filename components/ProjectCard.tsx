@@ -3,7 +3,15 @@ import Link from 'next/link';
 
 export default function ProjectCard() {
 
-  const projects = [
+  type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  slug: string;
+  };
+
+  const projects: Project[] = [
   {
     id: 1,
     title: "Quandoo",
@@ -49,7 +57,7 @@ export default function ProjectCard() {
               className="opacity-0 animate-fade-in-up bg-white rounded-xs w-full h-full backdrop-blur-sm hover:backdrop-blur-none transition-all duration-300"
               style={{ animationDelay: `${index * 120}ms` }}
             >
-              <div className="relative w-full aspect-[16/10]">
+              <div className="relative w-full aspect-[14/10]">
                 <div className="bg-gray-200 opacity-100 hover:opacity-75 transition-opacity duration-300">
                   <Image src={project.image} alt={project.title} fill className="object-cover" sizes="50vw" loading="eager" fetchPriority="high"/>
                 </div>
