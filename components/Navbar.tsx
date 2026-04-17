@@ -34,7 +34,7 @@ export default function Navbar() {
   }, [lastScrollY, isProjectPage]);
 
   return (
-    <header className={`h-16 flex items-center justify-between ${isProjectPage ? `fixed top-0 left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 z-50 mt-5 mb-5 bg-transparent transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}` : 'sticky top-0 z-10 mx-4 md:mx-8 lg:mx-16 mt-5 mb-5 bg-white/80 backdrop-blur-sm'}`}>
+    <header className={`h-16 flex items-center justify-between ${isProjectPage ? `fixed top-0 left-4 right-4 md:left-8 md:right-8 lg:left-16 lg:right-16 z-50 py-12 bg-transparent transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}` : 'sticky top-0 z-10 mx-4 md:mx-8 lg:mx-16 py-12 bg-white/80 backdrop-blur-sm'}`}>
       <Link href="/" className={`text-md font-bold tracking-wider ${isProjectPage ? 'text-white' : ''}`}>DANNI PFITZNER</Link>
       <div className="flex space-x-2">
         <Link
