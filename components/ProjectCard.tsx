@@ -3,7 +3,15 @@ import Link from 'next/link';
 
 export default function ProjectCard() {
 
-  const projects = [
+  type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  slug: string;
+  };
+
+  const projects: Project[] = [
   {
     id: 1,
     title: "Quandoo",

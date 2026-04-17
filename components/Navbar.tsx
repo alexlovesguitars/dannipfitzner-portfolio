@@ -44,7 +44,7 @@ export default function Navbar() {
               ? 'text-gray-900 underline'
               : isProjectPage
               ? 'text-white hover:text-gray-200'
-              : 'text-gray-400 hover:text-gray-900'
+              : 'text-gray-600 hover:text-gray-900'
           }`}
         >
           WORK
@@ -56,7 +56,7 @@ export default function Navbar() {
               ? 'text-gray-900 underline'
               : isProjectPage
               ? 'text-white hover:text-gray-200'
-              : 'text-gray-400 hover:text-gray-900'
+              : 'text-gray-600 hover:text-gray-900'
           }`}
         >
           ABOUT
