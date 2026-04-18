@@ -17,25 +17,26 @@ export default function ProjectPage({
 }: ProjectPageProps) {
   return (
     <main>
-      <section className="opacity-0 animate-fade-in-up relative h-80 md:h-screen pt-16 md:pt-0">
+      <section className="opacity-0 animate-fade-in-up relative w-full h-screen">
         <Image
           src={heroImage}
           alt={heroAlt}
           fill
-          className="object-cover"
+          className="object-scale-down lg:object-cover object-top"
           sizes="100vw"
           loading="eager"
           fetchPriority="high"
         />
       </section>
-      <section className="mx-4 md:mx-8 lg:mx-16 py-8">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-widest mb-2">
-          {title}
-        </h1>
-        <h2 className="text-lg italic tracking-wide mb-4 text-gray-500">
-          {subtitle}
-        </h2>
-        <p className="text-md leading-relaxed">{content}</p>
+      <section className="mx-5 md:mx-60 py-8">
+        <div className="grid grid-cols-2 gap-4 items-center mb-8">
+          <h1 className="text-3xl md:text-6xl font-bold mb-2">
+            {title}
+          </h1>
+          <p className="text-lg italic tracking-wide mb-4 text-black">
+            The Subway franchise started in 1965, and throughout the years became the largest fast food restaurant chain in the world with over 40,000 locations. In 2017, Subway aimed to freshen up their look with a rebrand done by Turner Duckworth. Our team at Fjord was tasked with the complete overhaul of the digital application, focused on cleanliness, usability, and new features.
+          </p>
+        </div>
       </section>
     </main>
   );
