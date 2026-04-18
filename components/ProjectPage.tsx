@@ -1,3 +1,4 @@
+import { Vast_Shadow } from "next/font/google";
 import Image from "next/image";
 
 interface ProjectPageProps {
@@ -17,12 +18,12 @@ export default function ProjectPage({
 }: ProjectPageProps) {
   return (
     <main>
-      <section className="opacity-0 animate-fade-in-up relative w-full h-screen">
+      <section className="opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-screen">
         <Image
           src={heroImage}
           alt={heroAlt}
           fill
-          className="object-scale-down lg:object-cover object-top"
+          className="object-cover"
           sizes="100vw"
           loading="eager"
           fetchPriority="high"
