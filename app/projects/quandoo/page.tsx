@@ -5,19 +5,29 @@ export default function Quandoo() {
     <ProjectPage
       heroImage="/images/Quandoo/Quandoo_Hero.webp"
       heroAlt="Quandoo Hero Image"
-      assetPath="/images/Quandoo/assets"
-      title="Quandoo"
-      subtitle="Quandoo is working to transform the world’s dining out experience for both diners and restaurants."
-      content={[
+      blocks={[
+        { kind: "title", text: "Quandoo" },
         {
-          title: "Project Overview",
-          subtitle: "Designing a seamless reservation experience for diners and restaurants",
-          body: (
-            <p>
-              At Quandoo, I was responsible for leading the design of the reservation platform, working closely with cross-functional teams to create a seamless user experience. I collaborated with product managers and developers to implement new features, improve navigation, and enhance the overall visual design. My work contributed to increasing user engagement and satisfaction with the Quandoo platform, helping to drive reservations and customer loyalty. The project involved extensive user research, iterative design processes, and close attention to brand consistency while modernizing the platform&apos;s interface.
-            </p>
-          )
-        }
+          kind: "subtitle",
+          text: "Quandoo is working to transform the world's dining out experience for both diners and restaurants.",
+        },
+        { kind: "title", text: "A BRIEF HISTORY" },
+        { kind: "subtitle", text: "How it all started (for me)" },
+        {
+          kind: "body",
+          text: "When I joined Quandoo's B2B team we were offering an extensive suite of products for our restaurant partners based on different segments of the market, and different user needs.",
+        },
+        {
+          kind: "image",
+          src: "/images/Quandoo/assets/Section01_BriefHistory01.webp",
+          alt: "Business Center (BC)",
+          caption: (
+            <>
+              <strong>Business Center (BC):</strong> A web platform used mostly
+              for setting up restaurant specifics and managing reservations.
+            </>
+          ),
+        },
       ]}
     />
   );

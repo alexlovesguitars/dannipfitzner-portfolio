@@ -1,32 +1,25 @@
 import Image from "next/image";
 import { ReactNode } from "react";
 
-interface ContentSection {
-  title: string;
-  subtitle: string;
-  body: ReactNode;
-}
+type ContentBlock =
+  | { kind: "title"; text: string }
+  | { kind: "subtitle"; text: ReactNode }
+  | { kind: "body"; text: ReactNode }
+  | { kind: "image"; src: string; alt: string; caption?: ReactNode }
 
 interface ProjectPageProps {
   heroImage: string;
   heroAlt: string;
-  title: string;
-  subtitle: ReactNode;
-  content: ContentSection[];
-  assetPath: string;
+  blocks: ContentBlock[];
 }
 
 export default function ProjectPage({
   heroImage,
   heroAlt,
-  title,
-  subtitle,
-  content,
-  assetPath,
+  blocks
 }: ProjectPageProps) {
   return (
     <main>
-      {/* Hero — fill is fine here because the section has a defined height */}
       <section className="opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-[100vh] overscroll-none">
         <Image
           src={heroImage}
@@ -40,35 +33,60 @@ export default function ProjectPage({
       </section>
 
       <section className="mx-5 md:mx-60 py-8 my-15">
-        {/* Title / subtitle row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center border-b border-gray-300 pb-20">
-          <h1 className="text-3xl md:text-6xl font-bold mb-2">{title}</h1>
-          <p className="text-md/8 tracking-wide mb-4 text-black md:mb-2 md:pr-20">{subtitle}</p>
+
+        {blocks.slice(0,2).map((block, index) => {
+          switch (block.kind) {
+            case "title":
+              return (
+                  <h1 key={index} className="text-3xl md:text-6xl font-bold mb-2">
+                    {block.text}
+                  </h1>
+                  );
+                case "subtitle":
+                  return (
+                    <p key={index} className="text-md/8 tracking-wide mb-4 text-black md:mb-2">
+                      {block.text}
+                    </p>
+                  );
+          };
+        })}
         </div>
 
-        {/* Brief history intro */}
-        <div className="row my-10">
-          <h3 className="text-xs mt-10 mb-5 text-gray-400 tracking-widest font-bold md:mb-2">
-              A BRIEF HISTORY
-            </h3>
-            <h2 className="text-3xl font-bold tracking-wide leading-relaxed">
-              How it all started (for me)
-            </h2>
-            <p className="text-md/8 my-5 text-black leading-relaxed">
-              When I joined Quandoo&apos;s B2B team we were offering an extensive suite
-              of products for our restaurant partners based on different segments
-              of the market, and different user needs.
-            </p>
+
+        <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 tracking-wide">
+          {blocks.slice(2).map((block, index) => {
+            switch (block.kind) {
+              case "title":
+                return (
+                  <h3 key={index} className="text-xs mt-10 mb-5 text-gray-400 tracking-widest font-bold md:mb-2">
+                    {block.text}
+                  </h3>
+                );
+              case "subtitle":
+                return (
+                  <h2 className="col-span-full text-3xl font-bold tracking-wide leading-relaxed">
+                    {block.text}
+                  </h2>
+                );
+              case "body":
+                return (
+                  <p key={index} className="text-md/8 my-5 text-black text-left leading-relaxed">
+                    {block.text}
+                  </p>
+                );
+              };
+          })};
         </div>
 
         {/* Grid: image card + text card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 tracking-wide ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 tracking-wide">
 
           {/* Fix: wrap fill image in a sized relative container, separate from the caption */}
           <div className="flex flex-col gap-3">
             <div className="relative w-full aspect-video">
               <Image
-                src={`${assetPath}/Section01_BriefHistory01.webp`}
+                src={"/images/Quandoo/assets/Section01_BriefHistory01.webp"}
                 alt="Business Center (BC)"
                 fill
                 className="object-cover mb-5"
@@ -87,7 +105,7 @@ export default function ProjectPage({
             <div className="flex flex-col gap-3">
               <div className="relative w-full aspect-video">
                   <Image
-                    src={`${assetPath}/Section01_BriefHistory02.webp`}
+                    src={"/images/Quandoo/assets/Section01_BriefHistory02.webp"}
                     alt="Business Center (BC)"
                     fill
                     className="object-cover mb-5"
