@@ -7,8 +7,7 @@ type ContentBlock =
   | { kind: "title"; text: string }
   | { kind: "subtitle"; text: string }
   | { kind: "body"; text: string }
-  | { kind: "sectionTitle"; text: string }
-  | { kind: "numbered"; items: ReactNode[]; splitAt?: number }
+  | { kind: "numbered"; items: ReactNode[]; splitAt?: number; title?: ReactNode; title2?: ReactNode }
   | { kind: "image"; src: string; alt: string; caption?: ReactNode }
 
 interface ListProps {
@@ -44,12 +43,6 @@ export default function NumberedList({
                     {block.text}
                   </p>
                 );
-              case "sectionTitle":
-                return (
-                    <h5 key={index} className="text-md/8 text-black font-bold">
-                      {block.text}
-                    </h5>
-                );
               case "numbered":
                 if (layout === "inline") {
                   return (
@@ -62,13 +55,19 @@ export default function NumberedList({
                 const col2 = block.splitAt ? block.items.slice(block.splitAt) : [];
                 return (
                   <div key={index} className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
-                    <ol className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-8`}>
-                      {col1.map((item, i) => <li key={i}>{item}</li>)}
-                    </ol>
-                    {col2.length > 0 && (
-                      <ol start={col1.length + 1} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-8`}>
-                        {col2.map((item, i) => <li key={i}>{item}</li>)}
+                    <div>
+                      {block.title && <h5 className="text-md/8 text-black font-bold">{block.title}</h5>}
+                      <ol className={`${listStyle} my-5 mx-5 text-md/8 text-black leading-relaxed space-y-8`}>
+                        {col1.map((item, i) => <li key={i}>{item}</li>)}
                       </ol>
+                    </div>
+                    {col2.length > 0 && (
+                      <div>
+                        {block.title2 && <h5 className="text-md/8 text-black font-bold">{block.title2}</h5>}
+                        <ol start={col1.length + 1} className={`${listStyle} my-5 mx-5 text-md/8 text-black leading-relaxed space-y-8`}>
+                          {col2.map((item, i) => <li key={i}>{item}</li>)}
+                        </ol>
+                      </div>
                     )}
                   </div>
                 );

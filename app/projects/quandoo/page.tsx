@@ -79,9 +79,7 @@ export default function Quandoo() {
         <NumberedList
           listStyle="list-disc"
           blocks={[
-            { kind: "sectionTitle", text: "Acquire" },
-            { kind: "sectionTitle", text: "Retain" },
-            { kind: "numbered", splitAt: 2, items: [
+            { kind: "numbered", splitAt: 2, title: <><strong>Acquire</strong></>, title2: <><strong>Retain</strong></>, items: [
               <>
                 Aquire more restaurants in our marketplace by ensuring we have a proper product fit for each segment of the market
               </>,
@@ -99,7 +97,6 @@ export default function Quandoo() {
               </>
             ]},
           ]}
-
         />
       </main>
     </>
