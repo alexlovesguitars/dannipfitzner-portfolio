@@ -15,7 +15,7 @@ export default function ImageGrid({
 }: ImageGridProps) {
   return (
 
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
 
     {blocks.slice().map((block, index) => {
       if (block.kind === "image") {
@@ -31,7 +31,7 @@ export default function ImageGrid({
                 />
               </div>
                 {block.caption && (
-                  <p className="text-md/8 my-10 text-black leading-relaxed">
+                  <p className="text-md/8 my-10 pr-10 text-black leading-relaxed">
                     {block.caption}
                   </p>
                   )}

@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import IntroSection from "@/components/sections/IntroSection";
 import ImageGrid from "@/components/sections/ImageGrid";
 import NumberedList from "@/components/sections/NumberedList";
+import ContentSection from "@/components/sections/ContentSection";
 
 export default function Quandoo() {
   return (
@@ -79,7 +80,7 @@ export default function Quandoo() {
         <NumberedList
           listStyle="list-disc"
           blocks={[
-            { kind: "numbered", splitAt: 2, title: <><strong>Acquire</strong></>, title2: <><strong>Retain</strong></>, items: [
+            { kind: "numbered", splitAt: 2, title: <>Acquire</>, title2: <>Retain</>, items: [
               <>
                 Aquire more restaurants in our marketplace by ensuring we have a proper product fit for each segment of the market
               </>,
@@ -98,6 +99,41 @@ export default function Quandoo() {
             ]},
           ]}
         />
+        <ContentSection
+        title="THE KICKOFF"
+        subtitle="Put in motion"
+        col1body={
+          <>
+            We first started by kicking-off two new products to meet our goals:
+            <br />
+            <br />
+            <strong>Book</strong>
+            <br />
+          </>
+          }
+        col1subheader="BUSINESS GOAL: ACQUIRE"
+        col1subbody={
+          <>
+            As an entirely new tool to cater to a segment of the market we haven&apos;t supported in the past; restaurants who just want more reservations, but not all the other management bells & whistles.
+          </>
+        }
+        col2body={
+          <>
+
+            <br />
+            <br />
+            <strong>Host</strong>
+            <br />
+          </>
+          }
+        col2subheader="BUSINESS GOAL: RETAIN"
+        col2subbody={
+          <>
+            As a replacement for an existing tool, the Business App, this tool aims to solve relevant business problems for busy restaurants in a more efficient and user-friendly way.
+          </>
+        }
+        />
+
       </main>
     </>
   );

@@ -22,7 +22,7 @@ export default function NumberedList({
   listStyle
 }: ListProps) {
   return (
-      <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 tracking-wide border-b border-gray-300 pb-20">
+      <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide border-b border-gray-300 pb-20">
           {blocks.slice().map((block, index) => {
             switch (block.kind) {
               case "title":
@@ -39,7 +39,7 @@ export default function NumberedList({
                 );
               case "body":
                 return (
-                  <p key={index} className="text-md/8 my-5 text-black text-left leading-relaxed">
+                  <p key={index} className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
                     {block.text}
                   </p>
                 );
