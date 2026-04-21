@@ -12,8 +12,8 @@ export default function IntroSection({
   body
 }: IntroSectionProps) {
   return (
-      <div className="row grid grid-cols-1 md:grid-cols-2 gap-2 tracking-wide">
-        <h3 className="text-xs md:mt-10 text-gray-400 tracking-widest font-bold">
+      <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 tracking-wide">
+        <h3 className="text-xs mt-10 text-gray-400 tracking-widest font-bold">
           {title}
         </h3>
         <h2 className="col-span-full text-3xl font-bold tracking-wide leading-relaxed">

@@ -14,15 +14,19 @@ interface ListProps {
   blocks: ContentBlock[];
   layout?: "default" | "inline";
   listStyle?: string;
+  border?: boolean;
+  imageboundary?: string;
 }
 
 export default function NumberedList({
   blocks,
   layout,
-  listStyle
+  listStyle,
+  border,
+  imageboundary
 }: ListProps) {
   return (
-      <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide border-b border-gray-300 pb-20">
+      <div className={`row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
           {blocks.slice().map((block, index) => {
             switch (block.kind) {
               case "title":
@@ -57,14 +61,14 @@ export default function NumberedList({
                   <div key={index} className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
                     <div>
                       {block.title && <h5 className="text-md/8 text-black font-bold">{block.title}</h5>}
-                      <ol className={`${listStyle} my-5 mx-5 text-md/8 text-black leading-relaxed space-y-8`}>
+                      <ol className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-8`}>
                         {col1.map((item, i) => <li key={i}>{item}</li>)}
                       </ol>
                     </div>
                     {col2.length > 0 && (
                       <div>
                         {block.title2 && <h5 className="text-md/8 text-black font-bold">{block.title2}</h5>}
-                        <ol start={col1.length + 1} className={`${listStyle} my-5 mx-5 text-md/8 text-black leading-relaxed space-y-8`}>
+                        <ol start={col1.length + 1} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-8`}>
                           {col2.map((item, i) => <li key={i}>{item}</li>)}
                         </ol>
                       </div>
@@ -80,7 +84,7 @@ export default function NumberedList({
                       src={block.src}
                       alt={block.alt}
                       fill
-                      className="object-cover mb-5"
+                      className={`object-cover ${imageboundary}`}
                       sizes="(max-width: 768px) 100vw, 50vw"
                       />
                         </div>
