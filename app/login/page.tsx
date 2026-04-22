@@ -24,8 +24,7 @@ function LoginForm() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-      <h1 className="text-2xl font-bold">Protected Page</h1>
+    <div className="flex flex-col items-center justify-center my-auto pb-50 gap-4">
       <p className="text-gray-500">Enter the password to continue</p>
       <input
         type="password"
