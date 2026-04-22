@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
 
-
-
 type ContentBlock =
   | { kind: "title"; text: string }
   | { kind: "subtitle"; text: string }

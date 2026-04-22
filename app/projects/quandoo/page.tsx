@@ -5,6 +5,7 @@ import NumberedList from "@/components/sections/NumberedList";
 import ContentSection from "@/components/sections/ContentSection";
 import ContentSection2 from "@/components/sections/ContentSection2";
 import CaseStudy from "@/components/sections/CaseStudies";
+import CreditSection from "@/components/sections/CreditSection";
 
 export default function Quandoo() {
   return (
@@ -154,13 +155,14 @@ export default function Quandoo() {
           <NumberedList
           border={false}
           imageboundary="border-b border-gray-300"
-            blocks={[
+          blocks={[
               { kind: "image", src: "/images/Quandoo/assets/WhereWereAtNow.webp", alt: "Where we're at now"},
             ]}
           />
         </main>
-        <main className="mx-5 md:mx-55 pb-8 mb-15">
-          <div className="bg-gray-50 w-full">
+        <div className="bg-gray-50 w-full">
+          <main className="mx-5 md:mx-55 pb-8 mb-15">
+
             <CaseStudy
               title="THE CASE STUDIES"
               cases={[
@@ -187,7 +189,30 @@ export default function Quandoo() {
                 },
               ]}
             />
-          </div>
+
+          </main>
+        </div>
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <CreditSection
+          listStyle="list-disc"
+          title="WHAT'S NEXT"
+          subtitle="Continuous improvement"
+          sectionHeader1={
+            <><strong>Priorities</strong></>
+          }
+          numbered1={[
+            <>Continue to improve <em><strong>Host</strong></em> for a proper release</>,
+            <>Continue to improve <em><strong>Pro</strong></em> based on insights from data and the Supply team</>,
+            <>Define the <em><strong>Premium</strong></em> product tier</>
+          ]}
+          sectionHeader2={
+            <><strong>Challenges</strong></>
+          }
+          numbered2={[
+            <>Technical debt (still migrating some things to the new architecture)</>,
+            <>Designers are dedicated to individual product tiers, but a lot of functionality overlaps, which can create some inconsistencies —  we are considering re-structuring so that designers own different product values ( Reservation list, Create reservations, etc.) to help with this</>
+          ]}
+          />
         </main>
     </>
   );

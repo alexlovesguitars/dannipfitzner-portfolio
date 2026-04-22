@@ -17,12 +17,12 @@ interface CaseStudiesProps {
 
 export default function CaseStudies({ title, cases }: CaseStudiesProps) {
   return (
-    <div className="p-15">
+    <div>
       <h3 className="text-xs mt-20 text-gray-400 tracking-widest font-bold">
         {title}
       </h3>
 
-      <div className="mt-10 flex flex-col gap-16">
+      <div className="mt-10 flex flex-col gap-5">
         {cases.map((c, i) => (
           <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
