@@ -1,47 +1,51 @@
 import { ReactNode } from "react";
 import Image from "next/image";
+import Button from "@/components/button"
 
-interface CaseStudiesSectionProps {
-  title: string;
+interface CaseStudy {
   subtitle: string;
-  col1body: ReactNode;
-  image?: { src: string; alt: string; caption?: ReactNode };
+  body: ReactNode;
+  image: { src: string; alt: string };
+  buttonLabel: string;
+  buttonHref: string;
 }
 
-export default function CaseStudiesSection({
-  title,
-  subtitle,
-  col1body,
-  image,
-}: CaseStudiesSectionProps) {
+interface CaseStudiesProps {
+  title: string;
+  cases: CaseStudy[];
+}
+
+export default function CaseStudies({ title, cases }: CaseStudiesProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 my-10 gap-2 tracking-wide">
-      <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">
+    <div className="p-15">
+      <h3 className="text-xs mt-20 text-gray-400 tracking-widest font-bold">
         {title}
       </h3>
-      <h2 className="col-span-full text-3xl mb-5 font-bold tracking-wide leading-relaxed">
-        {subtitle}
-      </h2>
 
+      <div className="mt-10 flex flex-col gap-16">
+        {cases.map((c, i) => (
+          <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
-      {/* col 1 */}
-      <div className="flex flex-col gap-5">
-        <p className="text-md/8 pr-5 text-black leading-relaxed">{col1body}</p>
-      </div>
+            {/* left: subtitle, body, button */}
+            <div className="flex flex-col gap-5">
+              <h2 className="text-3xl font-bold tracking-wide leading-relaxed">{c.subtitle}</h2>
+              <p className="text-md/8 font-light pr-15 text-black leading-relaxed">{c.body}</p>
+              <Button href={c.buttonHref} label={c.buttonLabel} />
+            </div>
 
-      {/* col 2 */}
-      <div className="flex items-start flex-col gap-5">
-        {image && (
-          <div className="relative w-full aspect-video">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            {/* right: image */}
+            <div className="relative w-full aspect-[16/12]">
+              <Image
+                src={c.image.src}
+                alt={c.image.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
           </div>
-        )}
+        ))}
       </div>
     </div>
   );

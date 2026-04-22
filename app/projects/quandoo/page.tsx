@@ -4,6 +4,7 @@ import ImageGrid from "@/components/sections/ImageGrid";
 import NumberedList from "@/components/sections/NumberedList";
 import ContentSection from "@/components/sections/ContentSection";
 import ContentSection2 from "@/components/sections/ContentSection2";
+import CaseStudy from "@/components/sections/CaseStudies";
 
 export default function Quandoo() {
   return (
@@ -30,6 +31,7 @@ export default function Quandoo() {
             ]}
           />
           <NumberedList
+            border={true}
             blocks={[
               { kind: "title", text: "THE PROBLEMS" },
               { kind: "subtitle", text: "Identifying the pain points" },
@@ -43,6 +45,7 @@ export default function Quandoo() {
             ]}
           />
           <NumberedList
+            border={true}
             listStyle="list-none"
             layout="inline"
             blocks={[
@@ -79,6 +82,7 @@ export default function Quandoo() {
             ]}
           />
           <NumberedList
+            border={true}
             listStyle="list-disc mx-5"
             blocks={[
               { kind: "numbered", splitAt: 2, title: <>Acquire</>, title2: <>Retain</>, items: [
@@ -154,7 +158,37 @@ export default function Quandoo() {
               { kind: "image", src: "/images/Quandoo/assets/WhereWereAtNow.webp", alt: "Where we're at now"},
             ]}
           />
-      </main>
+        </main>
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
+          <div className="bg-gray-50 w-full">
+            <CaseStudy
+              title="THE CASE STUDIES"
+              cases={[
+                {
+                  subtitle: "Starter",
+                  body: "Starter is a tool designed for restaurants who simply want to generate more business. These restaurants don't require any fancy reservation management systems, and want to keep costs as low as possible.",
+                  image: { src: "/images/Quandoo/assets/case_studies/StarteThumbnail.webp", alt: "Starter" },
+                  buttonLabel: "VIEW CASE STUDY",
+                  buttonHref: "/projects/quandoo/starter",
+                },
+                {
+                  subtitle: "Host App",
+                  body: "Host is an add-on, native app solution that restaurants can pair with the Pro (and future Premium) tool to effecively manage the flow of guests in the restaurant.",
+                  image: { src: "/images/Quandoo/assets/case_studies/HostThumbnail.webp", alt: "Host" },
+                  buttonLabel: "VIEW CASE STUDY",
+                  buttonHref: "/projects/quandoo/host",
+                },
+                {
+                  subtitle: "Pro",
+                  body: "Pro builds upon the fundamental values of reservation and guest management, and adds key functionality for busy reseaurants to further manage their availability and capacity.",
+                  image: { src: "/images/Quandoo/assets/case_studies/ProThumbnail.webp", alt: "Pro" },
+                  buttonLabel: "VIEW CASE STUDY",
+                  buttonHref: "/projects/quandoo/pro",
+                },
+              ]}
+            />
+          </div>
+        </main>
     </>
   );
 }
