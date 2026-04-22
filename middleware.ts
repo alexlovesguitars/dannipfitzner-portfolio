@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PROTECTED_ROUTES = ["/projects/quandoo", "/projects/att", "/projects/global-payments"];
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isProtected = PROTECTED_ROUTES.some(route => pathname.startsWith(route));
 

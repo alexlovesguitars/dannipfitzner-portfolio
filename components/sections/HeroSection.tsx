@@ -14,7 +14,7 @@ export default function ProjectPage({
   heroSubtitle
 }: HeroProps) {
   return (
-    <main>
+    <main className="relative">
       <section className="opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-[100vh] overscroll-none">
         <Image
           src={heroImage}
