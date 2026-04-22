@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Button from "@/components/button";
+import Button from "@/components/Button";
 
 export default function Login() {
   const [password, setPassword] = useState("");
