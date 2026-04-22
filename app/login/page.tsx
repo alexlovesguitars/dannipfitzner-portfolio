@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Button from "@/components/Button";
 
-export default function Login() {
+function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const router = useRouter();
@@ -26,7 +25,8 @@ export default function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-      <p className="text-black-500">Enter the password to continue</p>
+      <h1 className="text-2xl font-bold">Protected Page</h1>
+      <p className="text-gray-500">Enter the password to continue</p>
       <input
         type="password"
         value={password}
@@ -36,12 +36,17 @@ export default function Login() {
         placeholder="Password"
       />
       {error && <p className="text-red-500 text-sm">Incorrect password</p>}
-      <Button
-        href="#"
-        onClick={handleSubmit}
-        variant="primary"
-        label="Enter"
-      />
+      <button onClick={handleSubmit} className="bg-black text-white px-6 py-2 text-sm">
+        Enter
+      </button>
     </div>
+  );
+}
+
+export default function Login() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
   );
 }
