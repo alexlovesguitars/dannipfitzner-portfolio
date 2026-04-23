@@ -31,30 +31,32 @@ export default function CreditSection({
         {subtitle}
       </h2>
 
-      <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
-
-        <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
-          {sectionHeader1}
-        </p>
-
-        <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
-          {sectionHeader2}
-        </p>
-
-      </div>
 
       <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
 
-        <ol className={`${listStyle} my-5 pl-5 text-md/8 text-black leading-relaxed space-y-3`}>
-          {numbered1.map((item, i) => <li key={i}>{item}</li>)}
-        </ol>
+        <div>
+          <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
+            {sectionHeader1}
+          </p>
 
-        <ol className={`${listStyle} my-5 pl-5 text-md/8 text-black leading-relaxed space-y-3`}>
-          {numbered2.map((item, i) => <li key={i}>{item}</li>)}
-        </ol>
+          <ol className={`${listStyle} my-5 pl-5 text-md/8 text-black leading-relaxed space-y-3`}>
+            {numbered1.map((item, i) => <li key={i}>{item}</li>)}
+          </ol>
+        </div>
+
+        <div>
+          <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
+            {sectionHeader2}
+          </p>
+
+          <ol className={`${listStyle} my-5 pl-5 text-md/8 text-black leading-relaxed space-y-3`}>
+            {numbered2.map((item, i) => <li key={i}>{item}</li>)}
+          </ol>
+        </div>
 
       </div>
 
     </div>
+
   )
 }
