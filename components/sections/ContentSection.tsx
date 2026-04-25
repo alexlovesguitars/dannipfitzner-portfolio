@@ -33,7 +33,7 @@ function renderColBlock(block: ColBlock, index: number, listStyle?: string, list
       return <h3 key={index} className={`${listTitleStyle} text-xs text-gray-400 tracking-widest mt-10 font-bold`}>{block.text}</h3>;
     case "numbered":
       return (
-        <ol key={index} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-5`}>
+        <ol key={index} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-1`}>
           {block.items.map((item, i) => <li key={i}>{item}</li>)}
         </ol>
       );

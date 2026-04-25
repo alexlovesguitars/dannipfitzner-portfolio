@@ -16,6 +16,7 @@ interface ListProps {
   imageboundary?: string;
   aspectRatio?: string;
   width?: string;
+  spacing?: string;
 }
 
 export default function NumberedList({
@@ -25,7 +26,8 @@ export default function NumberedList({
   border,
   imageboundary,
   aspectRatio="aspect-video",
-  width="w-full"
+  width="w-full",
+  spacing="space-y-5"
 }: ListProps) {
   return (
       <div className={`row my-10 grid grid-cols-1 md:grid-cols-2 gap-0 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
@@ -63,14 +65,14 @@ export default function NumberedList({
                   <div key={index} className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
                     <div>
                       {block.title && <h5 className="text-md/8 text-black font-bold">{block.title}</h5>}
-                      <ol className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-5`}>
+                      <ol className={`${listStyle} ${spacing} text-md/8 text-black leading-relaxed my-5`}>
                         {col1.map((item, i) => <li key={i}>{item}</li>)}
                       </ol>
                     </div>
                     {col2.length > 0 && (
                       <div>
                         {block.title2 && <h5 className="text-md/8 text-black font-bold">{block.title2}</h5>}
-                        <ol start={col1.length + 1} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-5`}>
+                        <ol start={col1.length + 1} className={`${listStyle} ${spacing} text-md/8 text-black leading-relaxed my-5`}>
                           {col2.map((item, i) => <li key={i}>{item}</li>)}
                         </ol>
                       </div>
