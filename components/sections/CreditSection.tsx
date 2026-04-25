@@ -22,15 +22,15 @@ export default function CreditSection({
 }: CreditProps) {
   return (
     <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide">
+      <div>
+        <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">
+          {title}
+        </h3>
 
-      <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">
-        {title}
-      </h3>
-
-      <h2 className="col-span-full text-3xl font-bold tracking-wide leading-relaxed">
-        {subtitle}
-      </h2>
-
+        <h2 className="col-span-full text-3xl font-bold tracking-wide leading-relaxed">
+          {subtitle}
+        </h2>
+      </div>
 
       <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
 

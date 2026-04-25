@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isProjectPage = pathname.startsWith('/projects');
+  const isProjectPage = /^\/projects\/[^/]+$/.test(pathname);
   const isHome = pathname === '/';
   const isAbout = pathname === '/about';
   const [isVisible, setIsVisible] = useState(true);

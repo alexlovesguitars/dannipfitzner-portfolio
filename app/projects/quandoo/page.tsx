@@ -3,7 +3,6 @@ import IntroSection from "@/components/sections/IntroSection";
 import ImageGrid from "@/components/sections/ImageGrid";
 import NumberedList from "@/components/sections/NumberedList";
 import ContentSection from "@/components/sections/ContentSection";
-import ContentSection2 from "@/components/sections/ContentSection2";
 import CaseStudy from "@/components/sections/CaseStudies";
 import CreditSection from "@/components/sections/CreditSection";
 
@@ -16,7 +15,7 @@ export default function Quandoo() {
         heroTitle="Quandoo"
         heroSubtitle="Quandoo is working to transform the world's dining out experience for both diners and restaurants."
       />
-      <main className="mx-5 md:mx-55 pb-8 mb-15">
+      <main className="mx-5 md:mx-40 pb-8 mb-15">
           <IntroSection
             title="A BRIEF HISTORY"
             subtitle="How it all started (for me)"
@@ -106,50 +105,64 @@ export default function Quandoo() {
             ]}
           />
           <ContentSection
+          border={false}
           title="THE KICKOFF"
           subtitle="Put in motion"
-          col1body={
-            <>
-              We first started by kicking-off two new products to meet our goals:
-              <br />
-              <br />
-              <strong>Book</strong>
-              <br />
-            </>
+          col1={[
+            { kind: "body", text:
+              <>
+                We first started by kicking-off two new products to meet our goals:
+              </>
             }
-          col1subheader="BUSINESS GOAL: ACQUIRE"
-          col1subbody={
-            <>
-              As an entirely new tool to cater to a segment of the market we haven&apos;t supported in the past; restaurants who just want more reservations, but not all the other management bells & whistles.
-            </>
-          }
-          col2body={
-            <>
-              <br />
-              <br />
-              <strong>Host</strong>
-              <br />
-            </>
-            }
-          col2subheader="BUSINESS GOAL: RETAIN"
-          col2subbody={
-            <>
-              As a replacement for an existing tool, the Business App, this tool aims to solve relevant business problems for busy restaurants in a more efficient and user-friendly way.
-            </>
-          }
+          ]}
           />
-          <ContentSection2
+          <ContentSection
+          border={true}
+          col1={[
+            { kind: "body", text:
+              <>
+                <strong>Book</strong>
+              </>
+            },
+            { kind: "subheader", text:
+              "BUSINESS GOAL: ACQUIRE"
+            },
+            { kind: "body", text:
+              <>
+                As an entirely new tool to cater to a segment of the market we haven&apos;t supported in the past; restaurants who just want more reservations, but not all the other management bells & whistles.
+              </>
+            }
+          ]}
+          col2={[
+            { kind: "body", text:
+            <>
+              <strong>Host</strong>
+            </>
+            },
+            { kind: "subheader", text:
+              "BUSINESS GOAL: RETAIN"
+            },
+            { kind: "body", text:
+                <>
+                  As a replacement for an existing tool, the Business App, this tool aims to solve relevant business problems for busy restaurants in a more efficient and user-friendly way.
+                </>
+            }
+          ]}
+          />
+          <ContentSection
           border={false}
           title="A SLIGHT PIVOT"
           subtitle="Thinking holistically"
-          col1body={
+          col1={[
+            { kind: "body", text:
             <>
               Once we began defining the third new product we realized that  perhaps our strategy had been too narrow in focusing on individual products, rather than thinking about the entire ecosystem.
               <br />
               <br />
               We went back to the drawing board with the marketing team to define the name for the product suite, and the individual tiers.
             </>
-          }
+            }
+          ]}
           image={{ src: "/images/Quandoo/assets/QfR+Strategy.webp", alt: "QfR + Strategy" }}
           />
           <NumberedList
@@ -161,7 +174,7 @@ export default function Quandoo() {
           />
         </main>
         <div className="bg-gray-50 w-full">
-          <main className="mx-5 md:mx-55 pb-8 mb-15">
+          <main className="mx-5 md:mx-40 pb-8 mb-15">
 
             <CaseStudy
               title="THE CASE STUDIES"
@@ -192,27 +205,27 @@ export default function Quandoo() {
 
           </main>
         </div>
-        <main className="mx-5 md:mx-55 pb-8 mb-15">
-        <CreditSection
-          listStyle="list-disc"
-          title="WHAT'S NEXT"
-          subtitle="Continuous improvement"
-          sectionHeader1={
-            <><strong>Priorities</strong></>
-          }
-          numbered1={[
-            <>Continue to improve <em><strong>Host</strong></em> for a proper release</>,
-            <>Continue to improve <em><strong>Pro</strong></em> based on insights from data and the Supply team</>,
-            <>Define the <em><strong>Premium</strong></em> product tier</>
-          ]}
-          sectionHeader2={
-            <><strong>Challenges</strong></>
-          }
-          numbered2={[
-            <>Technical debt (still migrating some things to the new architecture)</>,
-            <>Designers are dedicated to individual product tiers, but a lot of functionality overlaps, which can create some inconsistencies —  we are considering re-structuring so that designers own different product values ( Reservation list, Create reservations, etc.) to help with this</>
-          ]}
-          />
+        <main className="mx-5 md:mx-40 pb-8 mb-15">
+          <CreditSection
+            listStyle="list-disc"
+            title="WHAT'S NEXT"
+            subtitle="Continuous improvement"
+            sectionHeader1={
+              <><strong>Priorities</strong></>
+            }
+            numbered1={[
+              <>Continue to improve <em><strong>Host</strong></em> for a proper release</>,
+              <>Continue to improve <em><strong>Pro</strong></em> based on insights from data and the Supply team</>,
+              <>Define the <em><strong>Premium</strong></em> product tier</>
+            ]}
+            sectionHeader2={
+              <><strong>Challenges</strong></>
+            }
+            numbered2={[
+              <>Technical debt (still migrating some things to the new architecture)</>,
+              <>Designers are dedicated to individual product tiers, but a lot of functionality overlaps, which can create some inconsistencies —  we are considering re-structuring so that designers own different product values ( Reservation list, Create reservations, etc.) to help with this</>
+            ]}
+            />
         </main>
     </>
   );

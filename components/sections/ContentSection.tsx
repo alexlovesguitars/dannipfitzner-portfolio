@@ -1,67 +1,103 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 
+type ColBlock =
+  | { kind: "body"; text: ReactNode }
+  | { kind: "subheader"; text: ReactNode }
+  | { kind: "numbered"; items: ReactNode[] }
+  | { kind: "listTitle"; text: ReactNode }
+
 interface ContentSectionProps {
-  title: string;
-  subtitle: string;
-  col1body: ReactNode;
-  col1subheader?: ReactNode;
-  col1subbody?: ReactNode;
-  col2body?: ReactNode;
-  col2subheader?: ReactNode;
-  col2subbody?: ReactNode;
+  title?: string;
+  subtitle?: string;
+  col1?: ColBlock[];
+  col2?: ColBlock[];
   image?: { src: string; alt: string; caption?: ReactNode };
+  aspectRatio?: string;
+  fullSpanImage?: { src: string; alt: string; caption?: ReactNode };
+  fullSpanMarginImage?: string;
+  fullSpanAspectRatio?: string;
+  border?: boolean;
+  listStyle?: string;
+  marginImage?: string;
+  listTitleStyle?: string;
 }
 
-export default function ContentSection({
+function renderColBlock(block: ColBlock, index: number, listStyle?: string, listTitleStyle?: string,) {
+  switch (block.kind) {
+    case "body":
+      return <p key={index} className="text-md/8 pr-5 text-black leading-relaxed">{block.text}</p>;
+    case "listTitle":
+      return <p key={index} className="text-md/8 pr-5 mt-10 text-black leading-relaxed">{block.text}</p>;
+    case "subheader":
+      return <h3 key={index} className={`${listTitleStyle} text-xs text-gray-400 tracking-widest mt-10 font-bold`}>{block.text}</h3>;
+    case "numbered":
+      return (
+        <ol key={index} className={`${listStyle} my-5 text-md/8 text-black leading-relaxed space-y-5`}>
+          {block.items.map((item, i) => <li key={i}>{item}</li>)}
+        </ol>
+      );
+  }
+}
+
+export default function ContentSection2({
   title,
   subtitle,
-  col1body,
-  col1subheader,
-  col1subbody,
-  col2body,
-  col2subheader,
-  col2subbody,
+  col1,
+  col2,
   image,
+  border,
+  aspectRatio = "aspect-video",
+  listStyle,
+  marginImage="",
+  fullSpanImage,
+  fullSpanAspectRatio = "aspect-video",
+  fullSpanMarginImage="",
+  listTitleStyle
 }: ContentSectionProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 my-10 gap-2 tracking-wide border-b border-gray-300 pb-20">
-
-      <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">
-        {title}
-      </h3>
-      <h2 className="col-span-full text-3xl mb-5 font-bold tracking-wide leading-relaxed">
-          {subtitle}
-      </h2>
-
+    <div className={`row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
 
       {/* col 1 */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-2">
 
-        <p className="text-md/8 pr-5 text-black leading-relaxed">{col1body}</p>
-        {col1subheader && <h3 className="text-xs text-gray-400 tracking-widest font-bold">{col1subheader}</h3>}
-        {col1subbody && <p className="text-md/8 pr-5 text-black leading-relaxed">{col1subbody}</p>}
+        <div>
+          {title && <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">{title}</h3>}
+          {subtitle && <h2 className="col-span-full text-3xl mb-5 font-bold tracking-wide leading-relaxed">{subtitle}</h2>}
+        </div>
+
+        {col1?.map((block, i) => renderColBlock(block, i, listStyle, listTitleStyle))}
       </div>
 
       {/* col 2 */}
-      <div className="flex items-start flex-col gap-5">
+      <div className="flex items-start flex-col gap-2">
         {image && (
-          <div className="relative w-full aspect-video">
+          <div className={`relative w-full ${aspectRatio}`}>
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover"
+              className={`object-cover ${marginImage}`}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         )}
         {image?.caption && <p className="text-md/8 text-black leading-relaxed">{image.caption}</p>}
-        {col2body && <p className="text-md/8 text-black leading-relaxed">{col2body}</p>}
-        {col2subheader && <h3 className="text-xs text-gray-400 tracking-widest font-bold">{col2subheader}</h3>}
-        {col2subbody && <p className="text-md/8 pr-5 text-black leading-relaxed">{col2subbody}</p>}
+        {col2?.map((block, i) => renderColBlock(block, i, listStyle, listTitleStyle))}
       </div>
 
+      {/* full column span image */}
+      {fullSpanImage && <div className="col-span-full">
+        <div className={`relative w-full ${fullSpanAspectRatio}`}>
+            <Image
+              src={fullSpanImage.src}
+              alt={fullSpanImage.alt}
+              fill
+              className={`object-cover ${fullSpanMarginImage}`}
+              sizes="100vw"
+            />
+          </div>
+      </div>}
     </div>
   );
 }
