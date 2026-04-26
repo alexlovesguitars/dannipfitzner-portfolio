@@ -191,6 +191,7 @@ export default function StarterCaseStudy() {
           title="THE LAUNCH"
           subtitle="We learned"
           listStyle="list-disc pl-5"
+          listItemSpacing="space-y-5"
           col1={[
             { kind: "body", text:
               <>

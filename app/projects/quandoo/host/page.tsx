@@ -4,7 +4,7 @@ import NumberedList from "@/components/sections/NumberedList";
 import Button from "@/components/Button";
 
 
-export default function StarterCaseStudy() {
+export default function HostCaseStudy() {
   return (
     <>
       <main className="mx-5 md:mx-40 pb-8 mb-15">
@@ -12,33 +12,143 @@ export default function StarterCaseStudy() {
           heroTitle="Host App"
         />
           <ContentSection
-            title="MAIN OBJECTIVES"
-            subtitle="Back to Basics"
+            title="BACKGROUND"
+            subtitle="Setting the stage"
+            listStyle="list-disc pl-5"
+            marginImage="mt-20"
             col1={[
               {kind: "body", text:
-                "As Book will be our simplest product yet, we went back to the basics of reservation systems to identify the absolute necessities for restaurants that are simply looking to gain more business, but don't want any complicated management features."
+                <>
+                  The <em><strong>Business App </strong></em>is an Android application that currently has around 6,000 active users.
+                  <br />
+                  <br />
+                  It allows restaurants to:
+                </>
+              },
+              {kind: "numbered", items: [
+                <>View upcoming reservations</>,
+                <>reate reservations and walk-ins</>,
+                <>See reservations mapped onto the restaurant table plan</>,
+                <>Create a wait-list</>
+              ]},
+              {kind: "listTitle", text:
+                "And much more..."
               }
             ]}
+            image={{ src: "/images/Quandoo/assets/case_studies/BA.webp", alt: "Business App"}}
             />
           <div className="border-b border-gray-300 mt-15"></div>
           <ContentSection
-            title="PROCESS"
-            subtitle="Setting the foundation"
+            border={true}
+            title="THE PROBLEMS"
+            subtitle="Identifying the pain points"
             aspectRatio="aspect-[14/10]"
-            marginImage="mt-10"
+            listStyle="list-disc pl-5"
+            listItemSpacing="space-y-5"
+            marginListTitle="mt-0"
+            headerLayout="full"
             col1={[
               { kind: "body", text:
               <>
-              Our UX researcher kicked off the discovery phase by conducting interviews with customers using Quandoo&apos; s existing tool <em><strong>Business Center Free+</strong></em> —  our most basic and affordable tool.
-              <br />
-              <br />
-              Despite being our simplest tool in the current suite, <em><strong>Free+</strong></em> requires internal set-up and from Quandoo support team, and contains many complex setting features that not all restaurants require.
-              <br />
-              <br />
-              The interviews focused on how these restaurants currently handle reservations, and any pain-points they have with the tool. The findings indicated a few key pillars to focus on: affordability, efficiency, and ease of use.
-              </>}
+                The main reason we needed to replace the <em><strong>BA</strong></em> was technical. The tool is currently only available for Android, and designed for one tablet size. We supply the tablets for restaurants who sign-up to use this product which results in high-costs for the company and excludes restaurants who prefer iOS.
+                <br />
+                <br />
+                Not only this, but the code base was so outdated that simple bug fixes and improvements to the product experience took much longer than is ideal.
+                <br />
+                <br />
+                Knowing we needed to rebuild the tool from scratch, it was our opportunity to improve the experience and align to our new design system.
+              </>
+              }
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/Book+GenerativeSearch.webp", alt: "Book Generative Search" }} />
+            col2={[
+              {kind: "listTitle", text:
+                <>
+                  Our churn analysis reports that 25% of customers have listed “bad experience/usability” as a churn reason.  By analyzing existing foundational research, support requests, and usability audits we identified many aspects to focus on:
+                </>
+              },
+              {kind: "numbered", items: [
+                <>Due to product complexity, onboarding new partners to the <em><strong>BA</strong></em> can be a lengthy process, resulting in high costs </>,
+                <>The lack of proper visibility and clarity surrounding key actions results in errors</>,
+                <>Users are not aware of how to undo their mistakes</>,
+                <>Important information is often hidden and therefore goes unnoticed</>,
+                <>The steps within flows for key actions are not guided, resulting in the user not knowing what to do next</>,
+                <>The process of seating walk-ins isn&apos;t quick enough, resulting in restaurants not logging this into the system and creating inaccurate availability in the table plan</>
+              ]}
+            ]}
+          />
+          <ContentSection
+            border={true}
+            title="PROCESS"
+            subtitle="Creating hypothesis"
+            listStyle="list-disc px-10"
+            listItemSpacing="space-y-5"
+            marginListTitle="mt-0"
+            headerLayout="full"
+            col1={[
+              {kind: "body", text:
+                <>
+                  <strong>01.</strong> We believe that by <strong>improving the user experience for completing service related tasks,</strong>  we will <strong>increase the amount of engaged users, reduce support requests</strong> and reduce acquisition costs for new restaurants.
+                </>
+              },
+              {kind: "subheader", text: "HOW?"},
+              {kind: "numbered", items: [
+                <>We believe that by <strong>increasing visibility and clarity of key actions</strong> we will <strong>reduce the time to correctly complete intended actions.</strong></>,
+                <>We believe that by <strong>providing more guidance for when to complete key actions</strong> we will <strong>reduce the time to correctly complete intended actions.</strong></>,
+                <>We believe that by <strong>simplifying the flows to complete key actions</strong> we will <strong>reduce the time to correctly complete intended actions.</strong></>,
+                <>We believe that by <strong>making it easier to undo incorrect actions</strong> we will <strong>reduce the amount of errors and reduce support requests.</strong></>,
+                <>We believe that by <strong>making important notifications and action items more apparent</strong> we will <strong>reduce problems such as overbooking and/or guests showing up with reservations the restaurant isn&apos;t aware of.</strong></>
+              ]},
+              {kind: "subheader", text: "WE WILL KNOW THIS TO BE TRUE"},
+              {kind: "numbered", items: [
+                <>when we see <strong>an increase in manually created reservations and walk-ins, as well as the type of information added (reservation notes) in Host vs BA.</strong></>,
+                <>when we see a <strong>reduction in the number of support requests Quandoo receives via Intercom.</strong></>,
+                <>when we see a <strong>reduction in the current cost and time Quandoo spends to onboard a new restaurant.</strong> </>
+              ]}
+            ]}
+            col2={[
+              {kind: "listTitle", text:
+                <>
+                  <strong>02.</strong> We believe that by <strong>providing a table plan view that users have ownership and control over,</strong> we will <strong>increase the amount of engaged users, increase the number of restaurants that report accurate inventory and reduce acquisition costs for new restaurants.</strong>
+                </>
+              },
+              {kind: "subheader", text: "WE WILL KNOW THIS TO BE TRUE"},
+              {kind: "numbered", items: [
+                <>when see <strong>an increase in interactions with the Table Plan view in Host vs BA.</strong></>,
+                <>when we see <strong>an increase in restaurants adding new inventory using the new Table Plan.</strong></>,
+                <>when we see <strong>a reduction in the current cost and time Quandoo spends to create a Table Plan.</strong></>
+              ]}
+            ]}
+          />
+          <ContentSection
+            border={true}
+            title="PRIORITIZING"
+            subtitle="Creating the milestones"
+            fullSpanMarginImage="mt-15"
+            col1={[
+              { kind: "body", text:
+                <>
+                  Partnering with my Product Owner, we established a list of user stories for the product as a whole. He then worked his google-sheet magic by importing data gathered from our BI team to measure most frequently used features, as well as qualitative insights from our market teams.
+                </>
+              }
+            ]}
+            fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Product-Matrix.webp", alt: "Product Matric" }}
+          />
+          <ContentSection
+            border={false}
+            fullSpanAspectRatio="aspect-[12/6]"
+            fullSpanMarginImage="px-10 pt-10"
+            col1={[
+            { kind: "body", text:
+            <>
+              Then, an ICE prioritization framework was put together using total number of users and also “sales enabler” as impact factors. We also had a session as an entire team to estimate level of effort from a design and implementation perspective.
+              <br />
+              <br />
+              With the combination of these artefacts we were able to define our first four milestones.
+            </>
+            }
+          ]}
+          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Milestones.webp", alt: "Milestones"}}
+          />
         </main>
 
       {/* VALUES SECTION */}
@@ -175,6 +285,8 @@ export default function StarterCaseStudy() {
             listStyle="list-disc pl-5"
             title="THE LAUNCH"
             subtitle="The challenges"
+            headerLayout="full"
+            marginListTitle="mt-0"
             col1={[
               { kind: "body", text:
                 <>
@@ -266,7 +378,8 @@ export default function StarterCaseStudy() {
           title="WHERE WE ARE NOW"
           subtitle="Continue the push"
           listStyle="list-disc px-5"
-
+          headerLayout="full"
+          marginListTitle="mt-0"
           col1={[
             { kind: "body", text:
               <>
