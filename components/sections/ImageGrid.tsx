@@ -15,7 +15,7 @@ export default function ImageGrid({
 }: ImageGridProps) {
   return (
 
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
+    <div className={`grid grid-cols-1 tracking-wide md:grid-cols-2 gap-2 mt-10 ${border ? "border-b border-gray-300 pb-20" : ""}`}>
     {blocks.length > 1}
     {blocks.slice().map((block, index) => {
       if (block.kind === "image") {

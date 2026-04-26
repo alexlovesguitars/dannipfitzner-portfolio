@@ -28,7 +28,7 @@ export default function ProjectPage({
       </section>
 
       <section className="mx-5 pt-8 mt-5 md:mx-40 md:mt-15">
-        <div className="grid grid-cols-2 gap-4 items-center border-b border-gray-300 pb-10 md:pb-20">
+        <div className="grid grid-cols-2 gap-4 items-center border-b tracking-wide border-gray-300 pb-10 md:pb-20">
           <div>
             <h1 className="text-3xl md:text-6xl font-bold mb-2">
               {heroTitle}

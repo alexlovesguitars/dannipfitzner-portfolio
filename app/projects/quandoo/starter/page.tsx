@@ -45,7 +45,7 @@ export default function StarterCaseStudy() {
 
       <div className="bg-gray-50 w-full">
 
-        <main className="mx-5 md:mx-55">
+        <main className="mx-5 md:mx-40">
             <ContentSection
               border={true}
               title="VALUE 01"
@@ -191,7 +191,7 @@ export default function StarterCaseStudy() {
           title="THE LAUNCH"
           subtitle="We learned"
           listStyle="list-disc pl-5"
-
+          listItemSpacing="space-y-5"
           col1={[
             { kind: "body", text:
               <>
@@ -272,10 +272,11 @@ export default function StarterCaseStudy() {
           ]}
           />
           <NumberedList
+            spacing="space-y-1"
             blocks={[
               { kind: "title", text: "TEAM" },
               { kind: "numbered", splitAt: 5, items: [
-                <><strong>Product Ownership: </strong>Julia Changnier</>,
+                  <><strong>Product Ownership: </strong>Julia Changnier</>,
                   <><strong> Product Design: </strong>Danni Pfitzner</>,
                   <><strong>Product Design - Design System Support: </strong>Seif Ahmed</>,
                   <><strong>UX Research: </strong>Steffany Farros  &  Roísín Fitzpatrick</>,
@@ -291,7 +292,7 @@ export default function StarterCaseStudy() {
             label="BACK TO QUANDOO OVERVIEW"
             />
             <Button
-            href=""
+            href="/projects/quandoo/host"
             label="NEXT CASE STUDY: HOST"
             />
           </div>
