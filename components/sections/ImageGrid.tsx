@@ -7,11 +7,15 @@ type ContentBlock =
 interface ImageGridProps {
   blocks: ContentBlock[];
   border?: boolean;
+  imageDimensions?: string;
+  marginImage?: string;
 }
 
 export default function ImageGrid({
   blocks,
-  border
+  border,
+  imageDimensions="w-full h-auto",
+  marginImage=""
 }: ImageGridProps) {
   return (
 
@@ -25,8 +29,9 @@ export default function ImageGrid({
               <Image
                 src={block.src}
                 alt={block.alt}
-                fill
-                className="object-cover mb-5"
+                width={1600}
+                height={900}
+                className={`object-contain ${imageDimensions} ${marginImage}`}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
