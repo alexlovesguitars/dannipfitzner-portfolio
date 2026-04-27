@@ -24,6 +24,9 @@ interface ContentSectionProps {
   listItemSpacing?: string;
   marginListTitle?: string;
   headerLayout?: string;
+  verticalMargin?: string;
+  imageDimensions?: string;
+  fullspanBody?: string;
 }
 
 function renderColBlock(block: ColBlock, index: number, listStyle?: string, listTitleStyle?: string, listItemSpacing?: string, marginListTitle?: string) {
@@ -57,11 +60,13 @@ export default function ContentSection2({
   listTitleStyle,
   listItemSpacing,
   marginListTitle="mt-10",
-  headerLayout="col1"
-
+  headerLayout="col1",
+  verticalMargin="my-10",
+  imageDimensions="w-full h-auto",
+  fullspanBody="flex flex-col gap-2"
 }: ContentSectionProps) {
   return (
-    <div className={`row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
+    <div className={`row ${verticalMargin} grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
       {headerLayout === "full" ? (
       <>
         {/* full width header + col 1 content below */}
@@ -69,7 +74,7 @@ export default function ContentSection2({
           {title && <h3 className="text-xs mt-10 text-gray-400 tracking-widest font-bold">{title}</h3>}
           {subtitle && <h2 className="text-3xl mb-5 font-bold tracking-wide leading-relaxed">{subtitle}</h2>}
         </div>
-        <div className="flex flex-col gap-2">
+        <div className={`${fullspanBody}`}>
           {col1?.map((block, i) => renderColBlock(block, i, listStyle, listTitleStyle, listItemSpacing, marginListTitle))}
         </div>
       </>
@@ -104,13 +109,13 @@ export default function ContentSection2({
 
       {/* full column span image */}
       {fullSpanImage && <div className="col-span-full">
-        <div>
+        <div className="flex justify-center">
             <Image
               src={fullSpanImage.src}
               alt={fullSpanImage.alt}
               width={1600}
               height={900}
-              className={`object-contain w-full h-auto ${fullSpanMarginImage}`}
+              className={`object-contain ${imageDimensions} ${fullSpanMarginImage}`}
               sizes="100vw"
             />
           </div>
