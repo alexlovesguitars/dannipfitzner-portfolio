@@ -17,6 +17,7 @@ interface ListProps {
   aspectRatio?: string;
   width?: string;
   spacing?: string;
+  verticalMargin?: string;
 }
 
 export default function NumberedList({
@@ -27,10 +28,11 @@ export default function NumberedList({
   imageboundary,
   aspectRatio="aspect-video",
   width="w-full",
-  spacing="space-y-5"
+  spacing="space-y-5",
+  verticalMargin="my-10"
 }: ListProps) {
   return (
-      <div className={`row my-10 grid grid-cols-1 md:grid-cols-2 gap-0 mt-10 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
+      <div className={`row ${verticalMargin} grid grid-cols-1 md:grid-cols-2 gap-0 tracking-wide ${border ? "border-b border-gray-300 pb-20" : ""}`}>
           {blocks.slice().map((block, index) => {
             switch (block.kind) {
               case "title":
