@@ -25,9 +25,8 @@ export default function StarterCaseStudy() {
           <div className="border-b border-gray-300 mt-15"></div>
           <ContentSection
             title="PROCESS"
+            centerItems={true}
             subtitle="Setting the foundation"
-            aspectRatio="aspect-[14/10]"
-            marginImage="mt-10"
             col1={[
               { kind: "body", text:
               <>
