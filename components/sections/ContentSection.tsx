@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Image from "next/image";
+import { Lightbox } from "../Lightbox";
 
 type ColBlock =
   | { kind: "body"; text: ReactNode }
@@ -56,13 +56,11 @@ export default function ContentSection2({
   listStyle,
   marginImage="",
   fullSpanImage,
-  fullSpanMarginImage="",
   listTitleStyle,
   listItemSpacing,
   marginListTitle="mt-10",
   headerLayout="col1",
   verticalMargin="my-10",
-  imageDimensions="w-full h-auto",
   fullspanBody="flex flex-col gap-2"
 }: ContentSectionProps) {
   return (
@@ -90,16 +88,14 @@ export default function ContentSection2({
       )}
 
       {/* col 2 */}
-      <div className="flex items-start flex-col gap-2">
+      <div className={`flex items-start align-center flex-col gap-2`}>
         {image && (
-          <div>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={1600}
-              height={900}
-              className={`object-contain w-full h-auto ${marginImage}`}
-              sizes="(max-width: 768px) 100vw, 50vw"
+          <div className={marginImage}>
+            <Lightbox
+              image={{
+                src: image.src,
+                alt: image.alt,
+              }}
             />
           </div>
         )}
@@ -110,13 +106,11 @@ export default function ContentSection2({
       {/* full column span image */}
       {fullSpanImage && <div className="col-span-full">
         <div className="flex justify-center">
-            <Image
-              src={fullSpanImage.src}
-              alt={fullSpanImage.alt}
-              width={1600}
-              height={900}
-              className={`object-contain ${imageDimensions} ${fullSpanMarginImage}`}
-              sizes="100vw"
+            <Lightbox
+              image={{
+                src: fullSpanImage.src,
+                alt: fullSpanImage.alt,
+              }}
             />
           </div>
       </div>}

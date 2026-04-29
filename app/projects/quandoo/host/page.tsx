@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 export default function HostCaseStudy() {
   return (
     <>
-      <main className="mx-5 md:mx-40 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
         <CaseStudyHero
           heroTitle="Host App"
         />
@@ -154,7 +154,7 @@ export default function HostCaseStudy() {
       {/* VALUES SECTION */}
       <div className="bg-gray-50 w-full">
 
-        <main className="mx-5 md:mx-40">
+        <main className="mx-5 md:mx-55">
             <ContentSection
               border={true}
               title="VALUE 01"
@@ -238,7 +238,7 @@ export default function HostCaseStudy() {
         </main>
       </div>
 
-      <main className="mx-5 md:mx-40">
+      <main className="mx-5 md:mx-55">
         <ContentSection
           border={true}
           aspectRatio="aspect-[17/13]"
@@ -266,7 +266,7 @@ export default function HostCaseStudy() {
       </main>
       <>
         {/* The Launch & Moving Forward & Interlude*/}
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
             border={true}
             fullSpanAspectRatio="aspect-[12/5]"
@@ -329,7 +329,7 @@ export default function HostCaseStudy() {
         {/* Improvement Section */}
 
         <div className="bg-gray-50 w-full">
-          <main className="mx-5 md:mx-40 pb-8 mb-15">
+          <main className="mx-5 md:mx-55 pb-8 mb-15">
             <ContentSection
               border={true}
               title="IMPROVEMENT 01"
@@ -372,7 +372,7 @@ export default function HostCaseStudy() {
 
         {/* Credits + Navigation */}
 
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
           border={true}
           title="WHERE WE ARE NOW"

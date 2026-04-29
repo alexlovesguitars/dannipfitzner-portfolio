@@ -8,7 +8,7 @@ import ImageGrid from "@/components/sections/ImageGrid";
 export default function PRO() {
   return (
     <>
-      <main className="mx-5 md:mx-40 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
 
       <CaseStudyHero
         heroTitle="Pro"
@@ -163,7 +163,7 @@ export default function PRO() {
           ]}
           />
         </main>
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
           border={true}
           title="VALUE 01"
@@ -230,7 +230,7 @@ export default function PRO() {
 
         </main>
       </div>
-      <main className="mx-5 md:mx-40 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
         <ContentSection
         border={true}
         title="THE LAUNCH"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
+import { Lightbox } from "../Lightbox";
 
 type ContentBlock =
   | { kind: "image"; src: string; alt: string; caption?: ReactNode }
@@ -26,14 +27,7 @@ export default function ImageGrid({
         return (
           <div key={index} className="flex flex-col gap-3">
             <div className="relative w-full aspect-video">
-              <Image
-                src={block.src}
-                alt={block.alt}
-                width={1600}
-                height={900}
-                className={`object-contain ${imageDimensions} ${marginImage}`}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                />
+              <Lightbox image={{ src: block.src, alt: block.alt }} />
               </div>
                 {block.caption && (
                   <p className="text-md/8 my-10 pr-10 text-black leading-relaxed">
