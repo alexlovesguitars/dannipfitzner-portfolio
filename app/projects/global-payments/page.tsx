@@ -13,6 +13,7 @@ export default function Subway() {
         heroImage="/images/GlobalPayments/GP_Hero.webp"
         heroAlt="GP Hero Image"
         heroTitle="Global Payments"
+        heroBackground="bg-[#786CA0]"
         heroSubtitle={
           <>
             Global Payments Inc. is a leading provider of payment technology and software solutions delivering technology and services on a global scale. They work to provide a broad range of solutions that allow customers to accept various payment types and operate their businesses more efficiently. Our task was to reimagine their <em><strong>BusinessView</strong></em> tool, a merchant portal that provides online access to transaction and payment information for customers using Global Payments’ payment terminals.
