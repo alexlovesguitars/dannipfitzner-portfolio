@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 export default function StarterCaseStudy() {
   return (
     <>
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <CaseStudyHero
             heroTitle="Starter"
             heroSubtitle={<>
@@ -45,7 +45,7 @@ export default function StarterCaseStudy() {
 
       <div className="bg-gray-50 w-full">
 
-        <main className="mx-5 md:mx-40">
+        <main className="mx-5 md:mx-55">
             <ContentSection
               border={true}
               title="VALUE 01"
@@ -131,7 +131,7 @@ export default function StarterCaseStudy() {
             />
       </div>
       <>
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
             border={true}
             aspectRatio="aspect-[16/17]"

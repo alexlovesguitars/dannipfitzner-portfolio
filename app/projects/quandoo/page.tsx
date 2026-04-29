@@ -16,7 +16,7 @@ export default function Quandoo() {
         heroSubtitle="Quandoo is working to transform the world's dining out experience for both diners and restaurants."
         heroBackground="bg-[#1377D2]"
       />
-      <main className="mx-5 md:mx-40 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
           <IntroSection
             title="A BRIEF HISTORY"
             subtitle="How it all started (for me)"
@@ -175,7 +175,7 @@ export default function Quandoo() {
           />
         </main>
         <div className="bg-gray-50 w-full">
-          <main className="mx-5 md:mx-40 pb-8 mb-15">
+          <main className="mx-5 md:mx-55 pb-8 mb-15">
 
             <CaseStudy
               title="THE CASE STUDIES"
@@ -206,7 +206,7 @@ export default function Quandoo() {
 
           </main>
         </div>
-        <main className="mx-5 md:mx-40 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8 mb-15">
           <CreditSection
             listStyle="list-disc"
             title="WHAT'S NEXT"
