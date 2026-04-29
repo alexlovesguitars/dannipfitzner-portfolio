@@ -5,22 +5,25 @@ interface HeroProps {
   heroAlt: string;
   heroTitle?: string;
   heroSubtitle?: string;
+  heroBackground?: string
 }
 
 export default function ProjectPage({
   heroImage,
   heroAlt,
   heroTitle,
-  heroSubtitle
+  heroSubtitle,
+  heroBackground="bg-[]"
 }: HeroProps) {
   return (
     <main className="relative">
-      <section className="opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-[100vh] overscroll-none">
+      <section className={`opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-[100vh] flex items-center justify-center overflow-hidden ${heroBackground}`}>
         <Image
           src={heroImage}
           alt={heroAlt}
-          fill
-          className="object-cover"
+          width={1600}
+          height={900}
+          className="object-contain w-full md:w-3/5 h-auto"
           sizes="100vw"
           loading="eager"
           fetchPriority="high"
