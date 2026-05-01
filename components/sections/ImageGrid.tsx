@@ -19,7 +19,7 @@ export default function ImageGrid({
 }: ImageGridProps) {
   return (
     <div
-      className={`grid grid-cols-1 tracking-wide md:grid-cols-2 gap-2 mt-10 ${
+      className={`grid grid-cols-1 tracking-wide md:grid-cols-2 gap-5 mt-10 ${
         border ? "border-b border-gray-300 pb-20" : ""
       }`}
     >

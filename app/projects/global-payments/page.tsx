@@ -24,8 +24,66 @@ export default function Subway() {
           </>
         }}
       />
-      <main className="mx-5 md:mx-55 pb-8 mb-15">
 
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <ContentSection
+        border={false}
+        title="OUR GOAL"
+        subtitle="A merchant focused solution"
+        col1={[
+          { kind: "body", text:
+            <>
+              BusinessView in it’s current state was heavily system-centric. The UI exposed data points created by the system’s handling of the transactions, which resulted in only a series of records and convoluted data. Users who were extremely familiar with the system could piece together a partial view of a transaction by running a series of reports. The process was less than intuitive, and the system lacked a consistent visual language.
+              <br />
+              <br />
+              Our goal was to design a merchant-centric approach, reflecting how humans actually think about transactions – as a digital entity that either positively or negatively impacts their funding levels.
+            </>},
+          { kind: "subheader", text:
+            <>
+              BUSINESSVIEW BEORE & AFTER
+            </>}
+        ]}
+        />
+        <ImageGrid
+        border={true}
+
+        blocks={[
+          { kind: "image", image:
+            {
+              src: "/images/GlobalPayments/assets/img_Folio_GP_BeforeDesigns.webp",
+              alt: "Before Designs",
+              mode: "lightbox"
+            }
+          },
+          { kind: "image", image:
+            {
+              src: "/images/GlobalPayments/assets/img_Folio_GP_AfterDesigns.webp",
+              alt: "After Designs",
+              mode: "lightbox"
+            }
+          },
+        ]}
+        />
+
+      </main>
+
+
+      <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <NumberedList
+        spacing="space-y-1"
+        blocks={[
+          { kind: "title", text: "TEAM" },
+          { kind: "numbered", splitAt: 5, items: [
+              <><strong>Creative Director: </strong>Isaiah Same</>,
+              <><strong>Art Director: </strong>Stephanie Ciccone</>,
+              <><strong>Visual Designer & Illustrator: </strong>Danni Pfitzner</>,
+              <><strong>UX Designers: </strong>Ansa Antonishen, Brit Clapper, Steven Smith, & Tony Matejek</>,
+              <><strong>Motion Designer: </strong>Tanya Arendale</>,
+              <><strong>Studio: </strong>Fjord - Austin, TX</>,
+              <><strong>Date: </strong>April 2016 - June 2016</>
+            ]}
+          ]}
+        />
       </main>
     </>
   );
