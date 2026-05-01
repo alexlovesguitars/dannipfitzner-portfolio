@@ -10,11 +10,15 @@ export default function Quandoo() {
   return (
     <>
       <HeroSection
-        heroImage="/images/Quandoo/QuandooHero.webp"
-        heroAlt="Quandoo Hero Image"
-        heroTitle="Quandoo"
-        heroSubtitle="Quandoo is working to transform the world's dining out experience for both diners and restaurants."
-        heroBackground="bg-[#1377D2]"
+        content={{
+          image: {
+            src: "/images/Quandoo/QuandooHero.webp",
+            alt: "Quandoo Hero Image"
+          },
+          title: "Quandoo",
+          subtitle: "Quandoo is working to transform the world's dining out experience for both diners and restaurants.",
+          background: "bg-[#1377D2]"
+        }}
       />
       <main className="mx-5 md:mx-55 pb-8 mb-15">
           <IntroSection

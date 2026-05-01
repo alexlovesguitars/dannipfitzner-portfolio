@@ -7,12 +7,13 @@ import Button from "@/components/Button";
 export default function StarterCaseStudy() {
   return (
     <>
-        <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8">
           <CaseStudyHero
-            heroTitle="Starter"
-            heroSubtitle={<>
-              Formerly named <em><strong>Book</strong></em>
-            </>} />
+            content={{
+              title: "Starter",
+              subtitle: <>Formerly named <em><strong>Book</strong></em></>
+            }}
+          />
           <ContentSection
             title="MAIN OBJECTIVES"
             subtitle="Back to Basics"

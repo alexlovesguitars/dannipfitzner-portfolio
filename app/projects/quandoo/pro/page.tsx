@@ -11,7 +11,9 @@ export default function PRO() {
       <main className="mx-5 md:mx-55 pb-8 mb-15">
 
       <CaseStudyHero
-        heroTitle="Pro"
+        content={{
+          title: "Pro"
+        }}
       />
 
       <ContentSection
@@ -119,12 +121,13 @@ export default function PRO() {
           "Once we had finalized our feature set for the first release I created job stories to ensure the team was aligned on the overall value and intention behind these features. This provided us with something to anchor our design and development tasks to."
         }
       ]}
-      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Job+Stories.webp", alt: "Job Stories"}}
+      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Job+Stories.webp", alt: "Job Stories", mode: "lightbox"}}
       />
       </main>
 
       <div className="bg-gray-50 w-full">
-        <main className="mx-5 md:mx-80 pb-8 mb-15">
+        <main className="mx-5 md:mx-80">
+
           <ContentSection
           border={false}
           fullspanBody="col-span-full"
@@ -141,28 +144,44 @@ export default function PRO() {
               The <em><strong>Pro</strong></em> product tier uses aspects of <em><strong>Starter</strong></em> and <em><strong>Host App</strong></em> as a base. Similarly, this tool contains the basic reservation system components such as the reservation list, and the creation of reservations and walk-ins. Please refer to those case studies to reference these basic feature sets.
               <br />
               <br />
-              <div className="flex flex-row justify-around">
+            </>
+            }
+          ]}
+          />
 
-                <Button
+        <>
+          <div className="flex flex-row justify-around">
+              <Button
                 href="/projects/quandoo/starter"
                 label="CASE STUDY: STARTER"
-                />
-                <Button
+              />
+              <Button
                 href="/projects/quandoo/host"
                 label="CASE STUDY: HOST"
-                />
+              />
 
-              </div>
+            </div>
+          </>
+
+        <ContentSection
+        border={true}
+        fullspanBody="col-span-full"
+        headerLayout="full"
+        col1={[
+          { kind: "body", text:
+            <>
               <br />
               <br />
               <>
                 What sets Pro apart is it&apos;s addition of integral settings that give the restaurant full ownership over their online presence and reservation management controls.
               </>
             </>
-            }
-          ]}
-          />
+          }
+        ]}
+        />
+
         </main>
+
         <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
           border={true}
@@ -310,7 +329,7 @@ export default function PRO() {
               { kind: "title", text: "TEAM" },
               { kind: "numbered", splitAt: 4, items: [
                   <><strong>Product Ownership: </strong> Inessa Karpetyan, Ismael Rios, & Hemant Pandita</>,
-                  <><strong>Product Design: </strong>Danni Kirchoff (2020-2021), Kostas Dimotsantos (2020), <br />Kaili Cheng (2021) & Nicole Ferreira (2021)</>,
+                  <><strong>Product Design: </strong>Danni Pfitzner (2020-2021), Kostas Dimotsantos (2020), <br />Kaili Cheng (2021) & Nicole Ferreira (2021)</>,
                   <><strong>UX Research: </strong>Roísín Fitzpatrick</>,
                   <><strong>Tech Leadership: </strong>Karolina Grabowska</>,
                   <><strong>Company: </strong>Quandoo GmbH - Berlin, Germany</>,

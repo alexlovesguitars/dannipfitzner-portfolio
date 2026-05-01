@@ -7,9 +7,11 @@ import Button from "@/components/Button";
 export default function HostCaseStudy() {
   return (
     <>
-      <main className="mx-5 md:mx-55 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8">
         <CaseStudyHero
-          heroTitle="Host App"
+          content={{
+            title: "Host App"
+          }}
         />
           <ContentSection
             title="BACKGROUND"
@@ -35,7 +37,7 @@ export default function HostCaseStudy() {
                 "And much more..."
               }
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/BA.webp", alt: "Business App"}}
+            image={{ src: "/images/Quandoo/assets/case_studies/BA.webp", alt: "Business App", mode: "lightbox"}}
             />
           <div className="border-b border-gray-300 mt-15"></div>
           <ContentSection
@@ -145,7 +147,7 @@ export default function HostCaseStudy() {
             </>
             }
           ]}
-          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Milestones.webp", alt: "Milestones"}}
+          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Milestones.webp", alt: "Milestones", mode: "lightbox"}}
           />
         </main>
 
@@ -165,7 +167,7 @@ export default function HostCaseStudy() {
                 </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host-Reservation+list.webp", alt: "Reservation List" }}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host-Reservation+list.webp", alt: "Reservation List", mode: "lightbox" }}
             />
             <ContentSection
               border={true}
@@ -182,7 +184,7 @@ export default function HostCaseStudy() {
                 </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host-Status+changes.webp", alt: "Status Changes" }}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host-Status+changes.webp", alt: "Status Changes", mode: "lightbox" }}
             />
             <ContentSection
               marginImage="mt-10"
@@ -258,6 +260,7 @@ export default function HostCaseStudy() {
             image={{ src: "/images/Quandoo/assets/case_studies/Host-Validation.webp", alt: "Validation", mode: "lightbox" }}
           />
       </main>
+
       <>
         {/* The Launch & Moving Forward & Interlude*/}
         <main className="mx-5 md:mx-55 pb-8 mb-15">
@@ -419,7 +422,7 @@ export default function HostCaseStudy() {
               { kind: "title", text: "TEAM" },
               { kind: "numbered", splitAt: 5, items: [
                   <><strong>Product Ownership: </strong>Tobias Reith & Yiying Lo</>,
-                  <><strong>Product Design: </strong>Danni Kirchoff (2019-2020) & Elham Salemian (2020-2021)</>,
+                  <><strong>Product Design: </strong>Danni Pfitzner (2019-2020) & Elham Salemian (2020-2021)</>,
                   <><strong>Product Design - Design System Support: </strong>Seif Ahmed</>,
                   <><strong>UX Research: </strong>Steffany Farros  &  Roísín Fitzpatrick</>,
                   <><strong>Tech Leadership: </strong>Sergii Nesterenko</>,
