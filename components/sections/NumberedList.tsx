@@ -1,12 +1,13 @@
-import Image from "next/image";
 import { ReactNode } from "react";
+import { AppImage } from "@/app/types/image";
+import { ImageBlock } from "../ImageBlock";
 
 type ContentBlock =
   | { kind: "title"; text: string }
   | { kind: "subtitle"; text: string }
   | { kind: "body"; text: string }
   | { kind: "numbered"; items: ReactNode[]; splitAt?: number; title?: ReactNode; title2?: ReactNode }
-  | { kind: "image"; src: string; alt: string; caption?: ReactNode }
+  | { kind: "image"; image: AppImage }
 
 interface ListProps {
   blocks: ContentBlock[];
@@ -83,23 +84,14 @@ export default function NumberedList({
                 );
               case "image":
                 if (block.kind === "image") {
-                return (
-                <div key={index} className="col-span-full">
-                  <div className={`relative ${width} ${aspectRatio} mx-auto`}>
-                    <Image
-                      src={block.src}
-                      alt={block.alt}
-                      fill
-                      className={`object-cover ${imageboundary}`}
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                  return (
+                    <div key={index} className="col-span-full">
+                      <ImageBlock
+                        image={block.image}
+                        className={`${width} ${aspectRatio} mx-auto ${imageboundary}`}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
-                        </div>
-                          {block.caption && (
-                            <p className="my-10 font-bold text-black">
-                              {block.caption}
-                            </p>
-                          )}
-                        </div>
+                    </div>
                 )
               }
             };

@@ -28,7 +28,7 @@ export default function PRO() {
             </>
           }
       ]}
-        image={{ src: "/images/Quandoo/assets/case_studies/BC.webp", alt: "Business Center"}}
+        image={{ src: "/images/Quandoo/assets/case_studies/BC.webp", alt: "Business Center", mode: "lightbox"}}
       />
 
       <ContentSection
@@ -90,30 +90,30 @@ export default function PRO() {
             <>Available feature sets</>
           ]}
         ]}
-        fullSpanImage={{src: "/images/Quandoo/assets/case_studies/MarketResearch.webp", alt: "Competitor Analysis"}}
+        fullSpanImage={{src: "/images/Quandoo/assets/case_studies/MarketResearch.webp", alt: "Competitor Analysis", mode: "lightbox"}}
       />
 
       <ContentSection
       border={true}
-      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/MarketResearchResults.webp", alt: "Research Results"}}
+      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/MarketResearchResults.webp", alt: "Research Results", mode: "lightbox"}}
       />
 
       <ContentSection
       border={true}
-      imageDimensions="w-3/4 h-auto"
       marginImage="mt-5"
       marginListTitle="mb-10"
+      fullSpanMarginImage="m-40 mt-0"
       col1={[
         { kind: "listTitle", text: "I also took a more granular look at their flows in an attempt to gauge overall usability and intuitiveness."}
       ]}
-      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/CompetitorAnalysis.webp", alt: "Further Analysis"}}
+      fullSpanImage={{src: "/images/Quandoo/assets/case_studies/CompetitorAnalysis.webp", alt: "Further Analysis", mode: "lightbox"}}
       />
 
       <ContentSection
       border={false}
       title="EMPHASIZING"
       subtitle="Understanding the job"
-      imageDimensions="w-3/4 h-auto mt-15"
+      fullSpanMarginImage="mx-50 mt-15 mb-0"
       col1={[
         { kind: "body", text:
           "Once we had finalized our feature set for the first release I created job stories to ensure the team was aligned on the overall value and intention behind these features. This provided us with something to anchor our design and development tasks to."
@@ -178,8 +178,8 @@ export default function PRO() {
               </>
             }
           ]}
-          image={{src: "/images/Quandoo/assets/case_studies/Pro+-+Avilability.webp", alt: "Availability"}}
-          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Preferences.webp", alt: "Preferences"}}
+          image={{src: "/images/Quandoo/assets/case_studies/Pro+-+Avilability.webp", alt: "Availability", mode: "lightbox"}}
+          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Preferences.webp", alt: "Preferences", mode: "lightbox"}}
           />
           <ContentSection
           border={true}
@@ -195,7 +195,7 @@ export default function PRO() {
               </>
             }
           ]}
-          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Capacity.webp", alt: "Capacity"}}
+          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Capacity.webp", alt: "Capacity", mode: "lightbox"}}
           />
 
           <ContentSection
@@ -207,7 +207,7 @@ export default function PRO() {
               <>Traditionally, the restaurant profiles on Quandoo&apos;s diner-facing website are managed by our internal support teams. With <em><strong>Pro</strong></em> the restaurants are in full control to define aspects like cuisine type, photos, menus, and more.</>
             }
           ]}
-          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Profile.webp", alt: "Profile"}}
+          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Profile.webp", alt: "Profile", mode: "lightbox"}}
           />
 
           <ContentSection
@@ -224,7 +224,7 @@ export default function PRO() {
               </>
             }
           ]}
-          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Set-up.webp", alt: "Set Up"}}
+          fullSpanImage={{src: "/images/Quandoo/assets/case_studies/Pro+-+Set-up.webp", alt: "Set Up", mode: "lightbox"}}
           />
 
 
@@ -252,14 +252,14 @@ export default function PRO() {
             </>
           }
         ]}
-        image={{src: "/images/Quandoo/assets/case_studies/Pro+-+Complexity.webp", alt: "Complexity"}}
+        image={{src: "/images/Quandoo/assets/case_studies/Pro+-+Complexity.webp", alt: "Complexity", mode: "lightbox"}}
         />
 
         <ImageGrid
         border={true}
         blocks={[
-          { kind: "image", src: "/images/Quandoo/assets/case_studies/Pro+-+Useful.webp", alt: "Useful"},
-          { kind: "image", src: "/images/Quandoo/assets/case_studies/Pro+-+Aesthetics.webp", alt: "Aesthetics"}
+          { kind: "image", image: {src: "/images/Quandoo/assets/case_studies/Pro+-+Useful.webp", alt: "Useful", mode: "lightbox"}},
+          { kind: "image", image: {src: "/images/Quandoo/assets/case_studies/Pro+-+Aesthetics.webp", alt: "Aesthetics", mode: "lightbox"}}
         ]}
         />
         <ContentSection
