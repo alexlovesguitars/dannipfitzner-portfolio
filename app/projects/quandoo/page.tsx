@@ -10,11 +10,15 @@ export default function Quandoo() {
   return (
     <>
       <HeroSection
-        heroImage="/images/Quandoo/QuandooHero.webp"
-        heroAlt="Quandoo Hero Image"
-        heroTitle="Quandoo"
-        heroSubtitle="Quandoo is working to transform the world's dining out experience for both diners and restaurants."
-        heroBackground="bg-[#1377D2]"
+        content={{
+          image: {
+            src: "/images/Quandoo/QuandooHero.webp",
+            alt: "Quandoo Hero Image"
+          },
+          title: "Quandoo",
+          subtitle: "Quandoo is working to transform the world's dining out experience for both diners and restaurants.",
+          background: "bg-[#1377D2]"
+        }}
       />
       <main className="mx-5 md:mx-55 pb-8 mb-15">
           <IntroSection
@@ -25,10 +29,10 @@ export default function Quandoo() {
           <ImageGrid
             border={true}
             blocks={[
-              { kind: "image", src: "/images/Quandoo/assets/Section01_BriefHistory01.webp", alt: "Business Center (BC)", caption: <><strong>Business Center (BC):</strong> A web platform used mostly for setting up restaurant specifics, managing reservation enquiries, viewing reservations, creating reservations and reporting. Targeted for restaurant managers in office settings, or reservation call centers (not during service).</> },
-              { kind: "image", src: "/images/Quandoo/assets/Section01_BriefHistory02.webp", alt: "Chain Center (CC)", caption: <><strong>Chain Center (CC):</strong> Intended for use in parallel with Business Center, with the additional features of chain management for restaurants with multiple locations.</> },
-              { kind: "image", src: "/images/Quandoo/assets/BusinessApp.webp", alt: "Business App (BA)", caption: <><strong>Business App (BA):</strong> A front of house app used on the restaurant floor to log and track restaurant traffic to keep up with overall availability. Targeted for hosts, or members of staff that are positioned at the door.</> },
-              { kind: "image", src: "/images/Quandoo/assets/RestaurantMobileApp.webp", alt: "Restaurant Mobile App (RMA)", caption: <><strong>Restaurant Mobile App (RMA):</strong> An easy way to view restaurant availability and important metrics on the go. Targeted for restaurant owners/managers who aren&apos;t always on-site.</> },
+              { kind: "image", image: {src: "/images/Quandoo/assets/Section01_BriefHistory01.webp", alt: "Business Center (BC)", caption: <><strong>Business Center (BC):</strong> A web platform used mostly for setting up restaurant specifics, managing reservation enquiries, viewing reservations, creating reservations and reporting. Targeted for restaurant managers in office settings, or reservation call centers (not during service).</>}},
+              { kind: "image", image: {src: "/images/Quandoo/assets/Section01_BriefHistory02.webp", alt: "Chain Center (CC)", caption: <><strong>Chain Center (CC):</strong> Intended for use in parallel with Business Center, with the additional features of chain management for restaurants with multiple locations.</> }},
+              { kind: "image", image: {src: "/images/Quandoo/assets/BusinessApp.webp", alt: "Business App (BA)", caption: <><strong>Business App (BA):</strong> A front of house app used on the restaurant floor to log and track restaurant traffic to keep up with overall availability. Targeted for hosts, or members of staff that are positioned at the door.</> }},
+              { kind: "image", image: {src: "/images/Quandoo/assets/RestaurantMobileApp.webp", alt: "Restaurant Mobile App (RMA)", caption: <><strong>Restaurant Mobile App (RMA):</strong> An easy way to view restaurant availability and important metrics on the go. Targeted for restaurant owners/managers who aren&apos;t always on-site.</> }},
             ]}
           />
           <NumberedList
@@ -59,8 +63,8 @@ export default function Quandoo() {
                 <><strong>- Spend per Head (SpH):</strong> Indicates the level of guest focus.</>,
                 <><strong>- Total Number of Seats (Capacity):</strong> Indicates the size.</>,
               ]},
-              { kind: "image", src: "/images/Quandoo/assets/Segmentation+visualization.webp", alt: "Segmentation and Visualisation",
-                caption: <> (All Illustrations shown on this page are done by our talented Communication Design team) </> },
+              { kind: "image", image: {src: "/images/Quandoo/assets/Segmentation+visualization.webp", alt: "Segmentation and Visualisation", mode: "lightbox",
+                caption: <> (All Illustrations shown on this page are done by our talented Communication Design team) </> }},
             ]}
           />
           <IntroSection
@@ -78,8 +82,8 @@ export default function Quandoo() {
           <ImageGrid
             border={false}
             blocks={[
-              { kind: "image", src: "/images/Quandoo/assets/Aquire.webp", alt: "Aquire" },
-              { kind: "image", src: "/images/Quandoo/assets/Retain.webp", alt: "Retain" },
+              { kind: "image", image: {src: "/images/Quandoo/assets/Aquire.webp", alt: "Aquire" }},
+              { kind: "image", image: {src: "/images/Quandoo/assets/Retain.webp", alt: "Retain" }},
             ]}
           />
           <NumberedList
@@ -164,13 +168,13 @@ export default function Quandoo() {
             </>
             }
           ]}
-          image={{ src: "/images/Quandoo/assets/QfR+Strategy.webp", alt: "QfR + Strategy" }}
+          image={{ src: "/images/Quandoo/assets/QfR+Strategy.webp", alt: "QfR + Strategy", mode: "lightbox" }}
           />
           <NumberedList
           border={false}
           imageboundary="border-b border-gray-300"
           blocks={[
-              { kind: "image", src: "/images/Quandoo/assets/WhereWereAtNow.webp", alt: "Where we're at now"},
+              { kind: "image", image: {src: "/images/Quandoo/assets/WhereWereAtNow.webp", alt: "Where we're at now", mode: "lightbox"}},
             ]}
           />
         </main>

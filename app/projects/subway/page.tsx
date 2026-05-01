@@ -10,16 +10,20 @@ export default function Subway() {
   return (
     <>
       <HeroSection
-        heroImage="/images/Subway/Subway_Hero.webp"
-        heroAlt="Subway Hero Image"
-        heroTitle="Subway"
-        heroBackground="bg-[#07B5D4]"
-        heroSubtitle={
+        content={{
+          image: {
+            src: "/images/Subway/Subway_Hero.webp",
+            alt: "Subway Hero Image"
+          },
+          title: "Subway",
+          background: "bg-[#07B5D4]",
+          subtitle:
           <>
             The Subway franchise started in 1965, and throughout the years became the largest fast food restaurant chain in the world with over 40,000 locations. In 2017, Subway aimed to freshen up their look with a rebrand done by <em><strong>Turner Duckworth.</strong></em> Our team at Fjord was tasked with the complete overhaul of the digital application, focused on cleanliness, usability, and new features.
-          </>
-        }
-        largeScreen="md:w-full"
+          </>,
+          imageWidth: "md:w-full"
+
+        }}
       />
       <main className="mx-5 md:mx-55 pb-8 mb-15">
 

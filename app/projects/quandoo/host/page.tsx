@@ -7,9 +7,11 @@ import Button from "@/components/Button";
 export default function HostCaseStudy() {
   return (
     <>
-      <main className="mx-5 md:mx-55 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8">
         <CaseStudyHero
-          heroTitle="Host App"
+          content={{
+            title: "Host App"
+          }}
         />
           <ContentSection
             title="BACKGROUND"
@@ -35,14 +37,13 @@ export default function HostCaseStudy() {
                 "And much more..."
               }
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/BA.webp", alt: "Business App"}}
+            image={{ src: "/images/Quandoo/assets/case_studies/BA.webp", alt: "Business App", mode: "lightbox"}}
             />
           <div className="border-b border-gray-300 mt-15"></div>
           <ContentSection
             border={true}
             title="THE PROBLEMS"
             subtitle="Identifying the pain points"
-            aspectRatio="aspect-[14/10]"
             listStyle="list-disc pl-5"
             listItemSpacing="space-y-5"
             marginListTitle="mt-0"
@@ -131,11 +132,10 @@ export default function HostCaseStudy() {
                 </>
               }
             ]}
-            fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Product-Matrix.webp", alt: "Product Matric" }}
+            fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Product-Matrix.webp", alt: "Product Matrix", mode: "lightbox" }}
           />
           <ContentSection
             border={false}
-            fullSpanAspectRatio="aspect-[12/6]"
             fullSpanMarginImage="px-10 pt-10"
             col1={[
             { kind: "body", text:
@@ -147,7 +147,7 @@ export default function HostCaseStudy() {
             </>
             }
           ]}
-          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Milestones.webp", alt: "Milestones"}}
+          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Milestones.webp", alt: "Milestones", mode: "lightbox"}}
           />
         </main>
 
@@ -158,7 +158,6 @@ export default function HostCaseStudy() {
             <ContentSection
               border={true}
               title="VALUE 01"
-              aspectRatio="aspect-[12/5]"
               marginImage="mt-8"
               subtitle="Plan for the day"
               col1={[
@@ -168,10 +167,9 @@ export default function HostCaseStudy() {
                 </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host-Reservation+list.webp", alt: "Reservation List" }}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host-Reservation+list.webp", alt: "Reservation List", mode: "lightbox" }}
             />
             <ContentSection
-              aspectRatio="aspect-[12/5]"
               border={true}
               title="VALUE 02"
               marginImage="mt-10"
@@ -186,7 +184,7 @@ export default function HostCaseStudy() {
                 </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host-Status+changes.webp", alt: "Status Changes" }}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host-Status+changes.webp", alt: "Status Changes", mode: "lightbox" }}
             />
             <ContentSection
               marginImage="mt-10"
@@ -206,11 +204,10 @@ export default function HostCaseStudy() {
               aspectRatio="aspect-[21/9]"
               border={true}
               blocks={[
-                { kind: "image", src: "/images/Quandoo/assets/case_studies/Host-Create+reservation.webp", alt: "Create Reservation" }
+                { kind: "image", image: {src: "/images/Quandoo/assets/case_studies/Host-Create+reservation.webp", alt: "Create Reservation", mode: "lightbox"}}
               ]}
             />
             <ContentSection
-              aspectRatio="aspect-[16/10]"
               border={true}
               title="VALUE 04"
               subtitle="Create the best experience for the guests"
@@ -221,7 +218,7 @@ export default function HostCaseStudy() {
                   </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host+-+Reservation+details.webp", alt: "Book & Account" }}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host+-+Reservation+details.webp", alt: "Book & Account", mode: "lightbox" }}
             />
             <ContentSection
               title="VALUE 05"
@@ -233,7 +230,7 @@ export default function HostCaseStudy() {
                   </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/Host+-+Reduce+mistakes.webp", alt: "Reduce Mistakes"}}
+              image={{ src: "/images/Quandoo/assets/case_studies/Host+-+Reduce+mistakes.webp", alt: "Reduce Mistakes", mode: "lightbox"}}
             />
         </main>
       </div>
@@ -241,7 +238,6 @@ export default function HostCaseStudy() {
       <main className="mx-5 md:mx-55">
         <ContentSection
           border={true}
-          aspectRatio="aspect-[17/13]"
           marginImage="mt-8"
           listStyle="list-disc pl-5"
           title="PROCESS"
@@ -261,15 +257,15 @@ export default function HostCaseStudy() {
               <>Adjusting table assignments</>
               ]}
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/Host-Validation.webp", alt: "Validation" }}
+            image={{ src: "/images/Quandoo/assets/case_studies/Host-Validation.webp", alt: "Validation", mode: "lightbox" }}
           />
       </main>
+
       <>
         {/* The Launch & Moving Forward & Interlude*/}
         <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
             border={true}
-            fullSpanAspectRatio="aspect-[12/5]"
             fullSpanMarginImage="px-10 pt-10"
             col1={[
                       { kind: "body", text:
@@ -278,7 +274,7 @@ export default function HostCaseStudy() {
                         </>
                       }
                     ]}
-            fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Host+-+Validation.webp", alt: "Validation"}}
+            fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Host+-+Validation.webp", alt: "Validation", mode: "lightbox"}}
           />
           <ContentSection
             border={true}
@@ -344,11 +340,10 @@ export default function HostCaseStudy() {
                   </>
                 }
               ]}
-              image={{ src: "/images/Quandoo/assets/case_studies/HostSeefuturedays.webp", alt: "See Future Days"}}
+              image={{ src: "/images/Quandoo/assets/case_studies/HostSeefuturedays.webp", alt: "See Future Days", mode: "lightbox"}}
             />
             <ContentSection
               border={true}
-              fullSpanAspectRatio="aspect-[16/6]"
               fullSpanMarginImage="px-10 pt-10"
               title="IMPROVEMENT 02"
               subtitle="Table allocations just got easier"
@@ -365,7 +360,7 @@ export default function HostCaseStudy() {
                   </>
                 }
               ]}
-              fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Host-TablePlan.webp", alt: "Host Table Plan"}}
+              fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/Host-TablePlan.webp", alt: "Host Table Plan", mode: "lightbox"}}
             />
           </main>
         </div>
@@ -427,7 +422,7 @@ export default function HostCaseStudy() {
               { kind: "title", text: "TEAM" },
               { kind: "numbered", splitAt: 5, items: [
                   <><strong>Product Ownership: </strong>Tobias Reith & Yiying Lo</>,
-                  <><strong>Product Design: </strong>Danni Kirchoff (2019-2020) & Elham Salemian (2020-2021)</>,
+                  <><strong>Product Design: </strong>Danni Pfitzner (2019-2020) & Elham Salemian (2020-2021)</>,
                   <><strong>Product Design - Design System Support: </strong>Seif Ahmed</>,
                   <><strong>UX Research: </strong>Steffany Farros  &  Roísín Fitzpatrick</>,
                   <><strong>Tech Leadership: </strong>Sergii Nesterenko</>,

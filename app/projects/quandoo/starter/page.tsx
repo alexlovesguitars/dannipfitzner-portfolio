@@ -7,12 +7,13 @@ import Button from "@/components/Button";
 export default function StarterCaseStudy() {
   return (
     <>
-        <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8">
           <CaseStudyHero
-            heroTitle="Starter"
-            heroSubtitle={<>
-              Formerly named <em><strong>Book</strong></em>
-            </>} />
+            content={{
+              title: "Starter",
+              subtitle: <>Formerly named <em><strong>Book</strong></em></>
+            }}
+          />
           <ContentSection
             title="MAIN OBJECTIVES"
             subtitle="Back to Basics"
@@ -38,7 +39,7 @@ export default function StarterCaseStudy() {
               The interviews focused on how these restaurants currently handle reservations, and any pain-points they have with the tool. The findings indicated a few key pillars to focus on: affordability, efficiency, and ease of use.
               </>}
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/Book+GenerativeSearch.webp", alt: "Book Generative Search" }} />
+            image={{ src: "/images/Quandoo/assets/case_studies/Book+GenerativeSearch.webp", alt: "Book Generative Search", mode: "lightbox" }} />
         </main>
 
       <div className="bg-gray-50 w-full">
@@ -58,7 +59,7 @@ export default function StarterCaseStudy() {
               image={{ src: "/images/Quandoo/assets/case_studies/book+listing.webp", alt: "Book & Listing" }}
             />
             <ContentSection
-              aspectRatio="aspect-[16/14]"
+
               border={true}
               title="VALUE 02"
               subtitle="Plan for the shift"
@@ -91,7 +92,7 @@ export default function StarterCaseStudy() {
               image={{ src: "/images/Quandoo/assets/case_studies/book+reservationDetails.webp", alt: "Book & Reservation Details" }}
             />
             <ContentSection
-              aspectRatio="aspect-[16/14]"
+
               border={true}
               title="VALUE 04"
               subtitle="Stay up to date"
@@ -124,7 +125,7 @@ export default function StarterCaseStudy() {
               width="w-3/4"
               border={false}
               blocks={[
-                { kind: "image", src: "/images/quandoo/assets/case_studies/Book+Sign-up.webp", alt: "Sign Up" }
+                { kind: "image", image: {src: "/images/quandoo/assets/case_studies/Book+Sign-up.webp", alt: "Sign Up", mode: "lightbox" }}
               ]}
             />
       </div>
@@ -132,8 +133,7 @@ export default function StarterCaseStudy() {
         <main className="mx-5 md:mx-55 pb-8 mb-15">
           <ContentSection
             border={true}
-            aspectRatio="aspect-[16/17]"
-            marginImage="md:mx-5"
+            marginImage="justify-around"
             listStyle="list-disc pl-5"
             title="PROCESS"
             subtitle="Validation"
@@ -165,7 +165,7 @@ export default function StarterCaseStudy() {
                 <>Check the details for the reservation</>
               ]},
             ]}
-            image={{ src: "/images/Quandoo/assets/case_studies/Validation.webp", alt: "Validation" }}
+            image={{ src: "/images/Quandoo/assets/case_studies/Validation.webp", alt: "Validation", mode: "lightbox" }}
           />
           <ContentSection
           border={false}
@@ -181,7 +181,7 @@ export default function StarterCaseStudy() {
               aspectRatio="aspect-[16/6]"
               border={true}
               blocks={[
-                { kind: "image", src: "/images/Quandoo/assets/case_studies/ValidationInsights.webp", alt: "Validation Insights" }
+                { kind: "image", image: {src: "/images/Quandoo/assets/case_studies/ValidationInsights.webp", alt: "Validation Insights", mode: "lightbox" }}
               ]}
             />
           <ContentSection
@@ -218,7 +218,6 @@ export default function StarterCaseStudy() {
           />
           <ContentSection
           border={true}
-          fullSpanAspectRatio="aspect-[12/6]"
           fullSpanMarginImage="px-10 pt-10"
           col1={[
             { kind: "body", text:
@@ -227,7 +226,7 @@ export default function StarterCaseStudy() {
               </>
             }
           ]}
-          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/PostLaunchInsights.webp", alt: "Post Launch Insights"}}
+          fullSpanImage={{ src: "/images/Quandoo/assets/case_studies/PostLaunchInsights.webp", alt: "Post Launch Insights", mode: "lightbox"}}
           />
           <ContentSection
           border={true}

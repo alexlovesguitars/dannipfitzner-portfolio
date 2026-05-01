@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 import Button from "@/components/Button";
 import { Lightbox } from "../Lightbox";
+import { AppImage } from "@/app/types/image";
 
 interface CaseStudy {
   subtitle: string;
   body: ReactNode;
-  image: { src: string; alt: string };
+  image: AppImage;
   buttonLabel: string;
   buttonHref: string;
 }
