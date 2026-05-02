@@ -6,7 +6,8 @@ type ColBlock =
   | { kind: "body"; text: ReactNode }
   | { kind: "subheader"; text: ReactNode }
   | { kind: "numbered"; items: ReactNode[] }
-  | { kind: "listTitle"; text: ReactNode };
+  | { kind: "listTitle"; text: ReactNode }
+  | { kind: "blockImage"; image: AppImage; margin?: string }
 
 interface ContentSectionProps {
   title?: string;
@@ -73,6 +74,12 @@ function renderColBlock(
             <li key={i}>{item}</li>
           ))}
         </ol>
+      );
+    case "blockImage":
+      return (  // was missing return
+        <div key={index} className={`${block.margin ?? ""} flex flex-col gap-2`}>
+          <ImageBlock image={block.image} className="" />
+        </div>
       );
   }
 }
