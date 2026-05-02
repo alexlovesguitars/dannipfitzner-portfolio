@@ -8,7 +8,7 @@ interface ImageGridProps {
   blocks: ContentBlock[];
   border?: boolean;
   imageDimensions?: string;
-  marginImage?: string;
+  marginImage?: string | Record<number, string>;
 }
 
 export default function ImageGrid({
@@ -17,9 +17,15 @@ export default function ImageGrid({
   imageDimensions = "w-full h-auto",
   marginImage = "",
 }: ImageGridProps) {
+
+  const getMargin = (index: number): string => {
+    if (typeof marginImage === "string") return marginImage;
+    return marginImage[index] ?? "";
+  };
+
   return (
     <div
-      className={`grid grid-cols-1 tracking-wide md:grid-cols-2 gap-2 mt-10 ${
+      className={`grid grid-cols-1 tracking-wide md:grid-cols-2 gap-5 mt-10 ${
         border ? "border-b border-gray-300 pb-20" : ""
       }`}
     >
@@ -29,7 +35,7 @@ export default function ImageGrid({
             <div key={index}>
               <ImageBlock
                 image={block.image}
-                className={`${imageDimensions} ${marginImage}`}
+                className={`${imageDimensions} ${getMargin(index)}`}
               />
             </div>
           );
