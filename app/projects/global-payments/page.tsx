@@ -22,7 +22,7 @@ export default function Subway() {
         }}
       />
 
-      <main className="mx-5 md:mx-55 pb-8 mb-15">
+      <main className="mx-5 md:mx-55 pb-8">
         <ContentSection
         border={false}
         title="OUR GOAL"
@@ -95,7 +95,7 @@ export default function Subway() {
         subtitle="Data you can digest"
         verticalMargin="mb-0"
         marginImage="md:mt-15"
-        fullSpanMarginImage="px-35"
+        fullSpanMarginImage="md:px-35"
         col1={[
           { kind: "body", text:
           <>
@@ -160,10 +160,10 @@ export default function Subway() {
 
       </main>
       <div className="bg-gray-50 w-full">
-        <main className="mx-5 md:mx-55 pb-8 mb-15">
+        <main className="mx-5 md:mx-55 pb-8">
 
         <ContentSection
-        fullSpanMarginImage="p-25"
+        fullSpanMarginImage="md:p-25"
         fullSpanImage={{src: "/images/GlobalPayments/assets/img_GP_UIKit.webp", alt: "UI KIT"}}
         />
 

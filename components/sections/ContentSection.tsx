@@ -76,7 +76,7 @@ function renderColBlock(
         </ol>
       );
     case "blockImage":
-      return (  // was missing return
+      return (
         <div key={index} className={`${block.margin ?? ""} flex flex-col gap-2`}>
           <ImageBlock image={block.image} className="" />
         </div>
