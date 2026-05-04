@@ -152,7 +152,7 @@ export default function Subway() {
         />
 
         <ContentSection
-          fullSpanImage={{src: "/images/ATT/assets/IMG_8566.PNG", alt: "Wirefrane Session"}}
+          fullSpanImage={{src: "/images/ATT/assets/IMG_8566.webp", alt: "Wirefrane Session"}}
         />
         <ContentSection
           border={true}
