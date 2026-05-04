@@ -41,7 +41,7 @@ export function Lightbox({ image }: LightboxProps) {
           setIsOpen(true);
         }}
 
-        className="block w-full overflow-hidden rounded-lg"
+        className="block w-full overflow-hidden"
       >
         <Image
           src={image.src}
