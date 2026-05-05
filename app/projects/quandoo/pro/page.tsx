@@ -38,7 +38,7 @@ export default function PRO() {
         title="THE PROBLEMS"
         subtitle="Identifying the pain points"
         listItemSpacing="space-y-5"
-        marginListTitle="mt-0"
+        marginListTitle="mt-5 md:mt-0"
         headerLayout="full"
         verticalMargin="mb-0 mt-10"
         col1={[

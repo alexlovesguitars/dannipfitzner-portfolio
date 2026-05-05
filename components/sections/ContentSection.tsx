@@ -122,7 +122,7 @@ export default function ContentSection({
       {headerLayout === "full" ? (
         <>
           {/* full width header + col 1 content below */}
-          <div className="col-span-full">
+          <div className="col-span-full flex flex-col gap-2">
             {title && (
               <h3 className={`text-xs mt-10 ${theme === "dark" ? "text-white" : "text-gray-400"} tracking-widest font-bold`}>
                 {title}

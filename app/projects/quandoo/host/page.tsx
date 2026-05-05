@@ -46,7 +46,7 @@ export default function HostCaseStudy() {
             subtitle="Identifying the pain points"
             listStyle="list-disc pl-5"
             listItemSpacing="space-y-5"
-            marginListTitle="mt-0"
+            marginListTitle="mt-5 md:mt-0"
             headerLayout="full"
             col1={[
               { kind: "body", text:
