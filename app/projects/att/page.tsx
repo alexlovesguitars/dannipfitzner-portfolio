@@ -3,7 +3,7 @@ import NumberedList from "@/components/sections/NumberedList";
 import ContentSection from "@/components/sections/ContentSection";
 import ImageGrid from "@/components/sections/ImageGrid";
 
-export default function Subway() {
+export default function ATT() {
   return (
     <>
       <HeroSection
