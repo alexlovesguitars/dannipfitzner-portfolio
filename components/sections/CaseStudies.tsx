@@ -29,8 +29,8 @@ export default function CaseStudies({ title, cases }: CaseStudiesProps) {
 
             {/* left: subtitle, body, button */}
             <div className="flex flex-col gap-5 m-auto">
-              <h2 className="text-3xl font-bold tracking-wide leading-7">{c.subtitle}</h2>
-              <p className="text-md font-light pr-15 text-black leading-7">{c.body}</p>
+              <h2 className="text-3xl font-bold tracking-wide leading-relaxed">{c.subtitle}</h2>
+              <p className="text-md font-light pr-15 text-black leading-relaxed">{c.body}</p>
               <Button href={c.buttonHref} label={c.buttonLabel} />
             </div>
 
