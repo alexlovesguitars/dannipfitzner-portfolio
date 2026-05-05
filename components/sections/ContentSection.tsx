@@ -7,7 +7,7 @@ type ColBlock =
   | { kind: "subheader"; text: ReactNode }
   | { kind: "numbered"; items: ReactNode[] }
   | { kind: "listTitle"; text: ReactNode }
-  | { kind: "blockImage"; image: AppImage; margin?: string }
+  | { kind: "blockImage"; image: AppImage; margin?: string; className?: string; }
 
 interface ContentSectionProps {
   title?: string;
@@ -26,6 +26,8 @@ interface ContentSectionProps {
   headerLayout?: string;
   verticalMargin?: string;
   fullspanBody?: string;
+  theme?: "light" | "dark";
+  className?: string;
 }
 
 function renderColBlock(
@@ -34,12 +36,16 @@ function renderColBlock(
   listStyle?: string,
   listTitleStyle?: string,
   listItemSpacing?: string,
-  marginListTitle?: string
+  marginListTitle?: string,
+  theme?: "light" | "dark",
 ) {
+
+  const textColor = theme === "dark" ? "text-white" : "text-black";
+
   switch (block.kind) {
     case "body":
       return (
-        <p key={index} className="text-md/8 pr-5 text-black leading-relaxed">
+        <p key={index} className={`text-md/8 pr-5 ${textColor} leading-relaxed`}>
           {block.text}
         </p>
       );
@@ -48,7 +54,7 @@ function renderColBlock(
       return (
         <p
           key={index}
-          className={`${marginListTitle} text-md/8 pr-5 text-black leading-relaxed`}
+          className={`${marginListTitle} text-md/8 pr-5 ${textColor} leading-relaxed`}
         >
           {block.text}
         </p>
@@ -58,7 +64,7 @@ function renderColBlock(
       return (
         <h3
           key={index}
-          className={`${listTitleStyle} text-xs text-gray-400 tracking-widest mt-10 font-bold`}
+          className={`${listTitleStyle} text-xs mt-10 ${theme === "dark" ? "text-gray-300" : "text-gray-400"} tracking-widest font-bold`}
         >
           {block.text}
         </h3>
@@ -68,7 +74,7 @@ function renderColBlock(
       return (
         <ol
           key={index}
-          className={`${listStyle} my-5 text-md/8 text-black leading-relaxed ${listItemSpacing}`}
+          className={`${listStyle} my-5 text-md/8 ${textColor} leading-relaxed ${listItemSpacing}`}
         >
           {block.items.map((item, i) => (
             <li key={i}>{item}</li>
@@ -78,7 +84,7 @@ function renderColBlock(
     case "blockImage":
       return (
         <div key={index} className={`${block.margin ?? ""} flex flex-col gap-2`}>
-          <ImageBlock image={block.image} className="" />
+          <ImageBlock image={block.image} className={block.className ?? ""} />
         </div>
       );
   }
@@ -101,8 +107,13 @@ export default function ContentSection({
   headerLayout = "col1",
   verticalMargin = "my-10",
   fullspanBody = "flex flex-col gap-2",
+  theme="light"
 }: ContentSectionProps) {
+
+  const textColor = theme === "dark" ? "text-white" : "text-black";
+
   return (
+
     <div
       className={`row ${verticalMargin} grid grid-cols-1 md:grid-cols-2 gap-2 mt-10 tracking-wide ${
         border ? "border-b border-gray-300 pb-20" : ""
@@ -113,12 +124,12 @@ export default function ContentSection({
           {/* full width header + col 1 content below */}
           <div className="col-span-full">
             {title && (
-              <h3 className="text-xs mt-10 text-gray-400 tracking-widest font-bold">
+              <h3 className={`text-xs mt-10 ${theme === "dark" ? "text-white" : "text-gray-400"} tracking-widest font-bold`}>
                 {title}
               </h3>
             )}
             {subtitle && (
-              <h2 className="text-3xl mb-5 font-bold tracking-wide leading-relaxed">
+              <h2 className={`text-3xl mb-5 font-bold tracking-wide leading-relaxed ${textColor}`}>
                 {subtitle}
               </h2>
             )}
@@ -132,7 +143,8 @@ export default function ContentSection({
                 listStyle,
                 listTitleStyle,
                 listItemSpacing,
-                marginListTitle
+                marginListTitle,
+                theme
               )
             )}
           </div>
@@ -142,12 +154,12 @@ export default function ContentSection({
           {/* header inside col 1 */}
           <div className="flex flex-col gap-2">
             {title && (
-              <h3 className="text-xs mt-10 text-gray-400 tracking-widest font-bold">
+              <h3 className={`text-xs mt-10 ${theme === "dark" ? "text-gray-300" : "text-gray-400"} tracking-widest font-bold`}>
                 {title}
               </h3>
             )}
             {subtitle && (
-              <h2 className="text-3xl mb-5 font-bold tracking-wide leading-relaxed">
+              <h2 className={`text-3xl mb-5 font-bold tracking-wide leading-relaxed ${textColor}`}>
                 {subtitle}
               </h2>
             )}
@@ -159,7 +171,8 @@ export default function ContentSection({
                 listStyle,
                 listTitleStyle,
                 listItemSpacing,
-                marginListTitle
+                marginListTitle,
+                theme
               )
             )}
           </div>
@@ -167,8 +180,8 @@ export default function ContentSection({
       )}
 
       {/* col 2 */}
-      <div className={`${marginImage} flex flex-col gap-2`}>
-        {image && <ImageBlock image={image} className="" />}
+      <div className={`${marginImage} flex flex-col gap-2 w-full`}>
+        {image && <ImageBlock image={image} className="w-full" />}
 
         {col2?.map((block, i) =>
           renderColBlock(
@@ -177,7 +190,8 @@ export default function ContentSection({
             listStyle,
             listTitleStyle,
             listItemSpacing,
-            marginListTitle
+            marginListTitle,
+            theme
           )
         )}
       </div>
