@@ -45,7 +45,7 @@ function renderColBlock(
   switch (block.kind) {
     case "body":
       return (
-        <p key={index} className={`text-md/8 pr-5 ${textColor} leading-relaxed`}>
+        <p key={index} className={`text-md leading-7 pr-5 ${textColor}`}>
           {block.text}
         </p>
       );
@@ -54,7 +54,7 @@ function renderColBlock(
       return (
         <p
           key={index}
-          className={`${marginListTitle} text-md/8 pr-5 ${textColor} leading-relaxed`}
+          className={`${marginListTitle} text-md leading-7 pr-5 ${textColor}`}
         >
           {block.text}
         </p>
@@ -74,7 +74,7 @@ function renderColBlock(
       return (
         <ol
           key={index}
-          className={`${listStyle} my-5 text-md/8 ${textColor} leading-relaxed ${listItemSpacing}`}
+          className={`${listStyle} my-5 text-md ${textColor} leading-8 ${listItemSpacing}`}
         >
           {block.items.map((item, i) => (
             <li key={i}>{item}</li>
@@ -129,7 +129,7 @@ export default function ContentSection({
               </h3>
             )}
             {subtitle && (
-              <h2 className={`text-3xl mb-5 font-bold tracking-wide leading-relaxed ${textColor}`}>
+              <h2 className={`text-3xl mb-5 font-bold tracking-wide leading-7 ${textColor}`}>
                 {subtitle}
               </h2>
             )}

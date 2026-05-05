@@ -11,7 +11,7 @@ export default function CaseStudyHero({ content }: CaseStudyHeroProps) {
         <h1 className="text-3xl md:text-6xl font-bold mb-2">
           {content.title}
         </h1>
-        <p className="text-md/8 tracking-wide mb-4 text-black md:mb-2">
+        <p className="text-md leading-7 tracking-wide mb-4 text-black md:mb-2">
           {content.subtitle}
         </p>
       </div>

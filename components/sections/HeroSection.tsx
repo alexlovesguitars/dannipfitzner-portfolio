@@ -35,7 +35,7 @@ export default function ProjectPage({ content }: ProjectPageProps) {
             </h1>
           </div>
           <div>
-            <p className="text-md/8 tracking-wide mb-4 text-black md:mb-2 md:pr-10 leading-8">
+            <p className="text-md tracking-wide mb-4 text-black md:mb-2 md:pr-10 leading-7">
               {content.subtitle}
             </p>
           </div>

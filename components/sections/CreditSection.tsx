@@ -22,12 +22,12 @@ export default function CreditSection({
 }: CreditProps) {
   return (
     <div className="row my-10 grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
-      <div>
-        <h3 className="col-span-full text-xs mt-10 text-gray-400 tracking-widest font-bold">
+      <div className="flex flex-col gap-2">
+        <h3 className="text-xs mt-10 text-gray-400 tracking-widest font-bold">
           {title}
         </h3>
 
-        <h2 className="col-span-full text-3xl font-bold tracking-wide leading-relaxed">
+        <h2 className="text-3xl mb-5 font-bold tracking-wide leading-7">
           {subtitle}
         </h2>
       </div>
@@ -35,17 +35,17 @@ export default function CreditSection({
       <div className="col-span-full grid grid-cols-1 md:grid-cols-2 md:gap-8">
 
         <div>
-          <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
+          <p className="text-md my-5 pr-10 text-black text-left leading-7">
             {sectionHeader1}
           </p>
 
-          <ol className={`${listStyle} my-5 pl-5 text-md/8 text-black leading-relaxed space-y-3`}>
+          <ol className={`${listStyle} my-5 pl-5 text-md text-black leading-7 space-y-3`}>
             {numbered1.map((item, i) => <li key={i}>{item}</li>)}
           </ol>
         </div>
 
         <div>
-          <p className="text-md/8 my-5 pr-10 text-black text-left leading-relaxed">
+          <p className="text-md my-5 pr-10 text-black text-left leading-7">
             {sectionHeader2}
           </p>
 

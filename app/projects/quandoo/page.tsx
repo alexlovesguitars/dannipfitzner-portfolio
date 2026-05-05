@@ -135,6 +135,8 @@ export default function Quandoo() {
             { kind: "body", text:
               <>
                 As an entirely new tool to cater to a segment of the market we haven&apos;t supported in the past; restaurants who just want more reservations, but not all the other management bells & whistles.
+                <br />
+                <br />
               </>
             }
           ]}
