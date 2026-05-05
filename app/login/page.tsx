@@ -1,11 +1,10 @@
 "use client";
 import { useState, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 function LoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const router = useRouter();
   const searchParams = useSearchParams();
   const redirect = searchParams.get("redirect") || "/";
 
@@ -17,7 +16,7 @@ function LoginForm() {
     });
 
     if (res.ok) {
-      router.push(redirect);
+      window.location.href = redirect;
     } else {
       setError(true);
     }
