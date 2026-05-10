@@ -109,13 +109,18 @@ export default function GoldmanSachs() {
                 We found that when it came to the onboarding process, users were hesitant to immediately set a recurring contribution, often resulting in new accounts with a zero balance. In order to alleviate this, we made it possible to make one time contributions. Not only does this fund newly open accounts, it makes it easy to contribute at any time, even straight from a mobile device.
               </>
               },
-              { kind: "blockImage", image: {src: "/images/GoldmanSachs/assets/img_HD_OneTimeContributions_Web.webp", alt: "Make One Payment", mode: "lightbox"}, margin: "m-10"},
-              { kind: "subheader", text: "OTHER ITERATIONS - "}
+              { kind: "blockImage", image: {src: "/images/GoldmanSachs/assets/img_HD_OneTimeContributions_Web.webp", alt: "Make One Payment", mode: "lightbox"}, margin: "m-10"}
             ]}
             col2={[
               { kind: "blockImage", image: {src: "/images/GoldmanSachs/assets/img_HD_OneTimeContributions_Mobile.webp", alt: "Make One Payment Mobile", mode: "lightbox"}, margin: "w-75 m-auto"}
             ]}
           />
+
+          <div>
+            <h3 className="text-xs mt-10 text-gray-300 tracking-widest font-bold">
+              OTHER ITERATIONS -
+            </h3>
+          </div>
 
           <ImageGrid
           marginImage="md:mb-15"
