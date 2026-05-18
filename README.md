@@ -55,6 +55,6 @@ Once I was in the React/Next.js ecosystem, a whole world of libraries, tutorials
 
 ## Reflections
 
-This portfolio isn't just a place to showcase my work — it *is* my work. Every decision I made while building it was a learning opportunity. Next.js gave me the right balance of structure and flexibility to grow as a developer.
+Every decision I made while building this portfolio site was a learning opportunity. Next.js gave me the right balance of structure and flexibility to grow as a developer.
 
 While to a trained professional there is a lot of potential for growth, to me this project was a good starting point in my Next.js journey.
