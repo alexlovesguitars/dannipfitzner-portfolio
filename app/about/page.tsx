@@ -41,7 +41,7 @@ export default function About() {
             </p>
 
             <p className="mb-6">
-              <a href="/public" target="_blank" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out">
+              <a href="/pdf/Kirchoff_Resume.pdf" target="_blank" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out">
                 View Resumé
               </a>
             </p>
