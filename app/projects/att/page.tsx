@@ -144,7 +144,7 @@ export default function ATT() {
                   We also got together with all the BCG teams that were working on AT&T engagements to level set, and find discrepancies with overall design patterns.
                   <br />
                   <br />
-                  <a href="public/pdf/Accpl_BCG_OA_Wires_BOOK_v5.pdf" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out" target="_blank">View Annotated Wires</a>
+                  <a href="/pdf/Accpl_BCG_OA_Wires_BOOK_v5.pdf" className="text-black underline font-bold hover:text-gray-500 transition-colors ease-in-out" target="_blank">View Annotated Wires</a>
                 </>
               }
             ]}
