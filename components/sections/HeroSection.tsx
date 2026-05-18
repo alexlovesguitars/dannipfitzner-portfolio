@@ -10,7 +10,7 @@ export default function ProjectPage({ content }: ProjectPageProps) {
     <main className="relative">
       {content.image && (
         <section
-          className={`opacity-0 animate-fade-in-up relative w-screen h-[40vh] lg:h-[100vh] flex items-center justify-center overflow-hidden ${
+          className={`opacity-0 animate-fade-in-up relative w-full h-[40vh] lg:h-[100vh] flex items-center justify-center overflow-hidden ${
             content.background ?? "bg-[]"
           }`}
         >
