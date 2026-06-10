@@ -125,7 +125,7 @@ export default function StarterCaseStudy() {
               width="w-3/4"
               border={false}
               blocks={[
-                { kind: "image", image: {src: "/images/quandoo/assets/case_studies/Book+Sign-up.webp", alt: "Sign Up", mode: "lightbox" }}
+                { kind: "image", image: {src: "/images/Quandoo/assets/case_studies/Book+Sign-up.webp", alt: "Sign Up", mode: "lightbox" }}
               ]}
             />
       </div>
